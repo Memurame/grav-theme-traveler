@@ -1,0 +1,92 @@
+title: entry_modular
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+      fields:
+        inhalt:
+          type: tab
+          title: THEME_TRAVELER.ADMIN.TAB.CONTENT
+          fields:
+            header.title:
+              type: text
+              autofocus: true
+              label: THEME_TRAVELER.ADMIN.FIELDS.TITLE.LABEL
+            header.image:
+              type: file
+              label: THEME_TRAVELER.ADMIN.FIELDS.IMAGE_HEADER.LABEL
+              destination: '@self'
+              accept:
+                - image/*
+            preview:
+              type: section
+              title: THEME_TRAVELER.ADMIN.SECTION.PREVIEW
+              underline: true
+              fields:
+                header.preview.show:
+                  type: toggle
+                  label: THEME_TRAVELER.ADMIN.FIELDS.PREVIEW_SHOW.LABEL
+                  highlight: 1
+                  default: 1 
+                  options:
+                    0: THEME_TRAVELER.ADMIN.FIELDS.PREVIEW_SHOW.OPTIONS.0
+                    1: THEME_TRAVELER.ADMIN.FIELDS.PREVIEW_SHOW.OPTIONS.1
+                header.preview.image:
+                  type: file
+                  label: THEME_TRAVELER.ADMIN.FIELDS.PREVIEW_IMAGE.LABEL
+                  destination: '@self'
+                  description: THEME_TRAVELER.ADMIN.FIELDS.PREVIEW_IMAGE.DESCRIPTION
+                header.preview.text:
+                  type: textarea
+                  rows: 6
+                  label: THEME_TRAVELER.ADMIN.FIELDS.PREVIEW_TEXT.LABEL
+                  validate:
+                    required: true
+            settings:
+              type: section
+              title: THEME_TRAVELER.ADMIN.SECTION.SETTINGS
+              underline: true
+              fields:
+                columns:
+                  type: columns
+                  fields:
+                    column1:
+                      type: column
+                      fields:
+                        header.show:
+                          type: toggle
+                          label: THEME_TRAVELER.ADMIN.FIELDS.ENTRYSHOW.LABEL
+                          help: THEME_TRAVELER.ADMIN.FIELDS.ENTRYSHOW.HELP
+                          highlight: 1
+                          default: 1
+                          options:
+                            0: THEME_TRAVELER.ADMIN.FIELDS.ENTRYSHOW.OPTIONS.0
+                            1: THEME_TRAVELER.ADMIN.FIELDS.ENTRYSHOW.OPTIONS.1
+                          validate:
+                            type: bool
+                        header.content.items:
+                          type: select
+                          label: PLUGIN_ADMIN.ITEMS
+                          default: '@self.modular'
+                          options:
+                            '@self.modular': Modular Children
+
+                        header.content.order.by:
+                          type: select
+                          label: PLUGIN_ADMIN.ORDER_BY
+                          default: folder
+                          options:
+                            folder: PLUGIN_ADMIN.FOLDER
+                            title: PLUGIN_ADMIN.TITLE
+                            date: PLUGIN_ADMIN.DATE
+                            default: PLUGIN_ADMIN.DEFAULT
+
+                        header.content.order.dir:
+                          type: select
+                          label: PLUGIN_ADMIN.ORDER
+                          default: asc
+                          options:
+                            asc: PLUGIN_ADMIN.ASCENDING
+                            desc: PLUGIN_ADMIN.DESCENDING

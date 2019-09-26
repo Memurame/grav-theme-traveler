@@ -1,0 +1,53 @@
+<!-- This Grav Theme was build by Tom Hirter -->
+<!-- https://hirter.dev or https://github.com/memurame -->
+
+{% set theme_config = attribute(config.themes, config.system.pages.theme) %}
+{% set favicon = theme_var('header.favicon') %}
+<!DOCTYPE html>
+<html lang="{{ grav.language.getLanguage ?: 'de' }}">
+    <head>
+        {% block head %}
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <meta name="apple-mobile-web-app-capable" content="yes" />
+            {% include 'partials/metadata.html.twig' %}
+            <link rel="shortcut icon" href="/favicon.ico">
+            {% if favicon %}
+                {% set favicon_file = (favicon|first).name %}
+                <link rel="icon" type="image/png" href="{{ url('theme://images/favicon/' ~ favicon_file) }}" sizes="32X32" />
+                <link rel="apple-touch-icon" href="{{ url('theme://images/favicon/' ~ favicon_file) }}">
+            {% else %}
+                <link rel="icon" type="image/png" href="{{ url('theme://images/favicon.png') }}" sizes="32X32" />
+                <link rel="apple-touch-icon" href="{{ url('theme://images/favicon.png') }}">
+            {% endif %}
+            <link rel="canonical" href="{{ page.url(true, true) }}" />
+            <title>{% if header.title %}{{ header.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
+
+            {% block stylesheets %}
+                {% do assets.addCss('theme://build/css/traveler.min.css', 1) %}
+            {% endblock %}
+            {{ assets.css() }}
+        {% endblock head %}
+
+    </head>
+    <body>
+        <div class="wrapper">
+          {% include 'partials/header.html.twig' %}
+
+          <main class="site-content">
+            {% block main %}{% endblock %}
+          </main>
+
+          <footer class="site-footer">
+            <small class="copyright">Copyright © 2019 Grav |
+              Grav Theme: <a href="//hirter.dev" target="_blank">Tom Hirter</a></small>
+          </footer>
+        </div>
+        {% block javascripts %}
+            {% do assets.addJs('theme://build/js/traveler.core.min.js',100) %}
+            {% do assets.addJs('theme://build/js/traveler.app.min.js',80) %}
+        {% endblock %}
+        {{ assets.js() }}
+    </body>
+</html>

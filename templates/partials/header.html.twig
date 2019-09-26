@@ -1,0 +1,33 @@
+<div class="menu-toggle">
+  <div>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<div class="mobile-navigation">
+  {% include 'partials/navigation.html.twig' %}
+  <div class="home">
+    <a href="{{ home_url }}"><i class="fas fa-home"></i></a>
+  </div>
+</div>
+
+<header class="site-header {{ theme_var('header.fixed') ? 'fixed' : '' }}">
+  <div class="logo">
+    {% set logo = theme_var('header.logo') %}
+    <a href="{{ home_url }}">
+      {% if logo %}
+        {% set logo_file = (logo|first).name %}
+        <img src="{{ url('theme://images/logo/' ~ logo_file)  }}" alt="{{ site.name }}" />
+      {% else %}
+        <img src="{{ url('theme://images/logo.svg')  }}" alt="{{ site.name }}" />
+      {% endif %}
+    </a>
+  </div>
+  <div class="navigation">
+    {% include 'partials/navigation.html.twig' %}
+  </div>
+</header>
+
+

@@ -1,0 +1,11 @@
+{% set taxlist = children_only is defined ? taxonomylist.getChildPagesTags() : taxonomylist.get() %}
+
+{% if taxlist %}
+<div class="entry-filters">
+        <a class="filter-button font-weight-bold" href="{{ base_url }}">Alle</a>
+    {% for tax,value in taxlist[taxonomy] %}
+        {% set active = uri.param(taxonomy) == tax? 'active' : '' %}
+        <a class="filter-button {{ active }}" href="{{ base_url }}/{{ taxonomy }}{{ config.system.param_sep }}{{ tax }}">{{ tax | capitalize }}</a>
+    {% endfor %}
+</div>
+{% endif %}

@@ -1,0 +1,87 @@
+title: home
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+      fields:
+        inhalt:
+          type: tab
+          title: THEME_TRAVELER.ADMIN.TAB.CONTENT
+          fields:
+            header.title:
+              type: text
+              autofocus: true
+              label: THEME_TRAVELER.ADMIN.FIELDS.TITLE.LABEL
+            content:
+              type: section
+              title: THEME_TRAVELER.ADMIN.SECTION.CONTENT
+              underline: true
+              fields:
+                header.heading:
+                  type: text
+                  autofocus: true
+                  label: THEME_TRAVELER.ADMIN.FIELDS.HEADING.LABEL
+                header.slogan:
+                  type: textarea
+                  autofocus: true
+                  label: THEME_TRAVELER.ADMIN.FIELDS.SLOGAN.LABEL
+                  rows: 3
+                header.buttons:
+                  type: list
+                  label: THEME_TRAVELER.ADMIN.FIELDS.BUTTONS.LABEL
+                  fields:
+                    .label:
+                      type: text
+                      label: THEME_TRAVELER.ADMIN.FIELDS.DESCRIPTION.LABEL
+                      validate:
+                        required: true
+                    .redirect:
+                      type: pages
+                      classes: fancy
+                      label: THEME_TRAVELER.ADMIN.FIELDS.REDIRECT.LABEL
+                      show_all: false
+                      show_modular: false
+                      show_root: false
+                      validate:
+                        required: true
+                header.images:
+                  type: pagemedia
+                  label: THEME_TRAVELER.ADMIN.FIELDS.IMAGES.LABEL
+            settings:
+              type: section
+              title: THEME_TRAVELER.ADMIN.SECTION.SETTINGS
+              underline: true
+              fields:
+                columns:
+                  type: columns
+                  fields:
+                    column1:
+                      type: column
+                      fields:
+                        header.content.items:
+                          type: select
+                          label: PLUGIN_ADMIN.ITEMS
+                          default: '@self.modular'
+                          options:
+                            '@self.modular': Modular Children
+
+                        header.content.order.by:
+                          type: select
+                          label: PLUGIN_ADMIN.ORDER_BY
+                          default: folder
+                          options:
+                            folder: PLUGIN_ADMIN.FOLDER
+                            title: PLUGIN_ADMIN.TITLE
+                            date: PLUGIN_ADMIN.DATE
+                            default: PLUGIN_ADMIN.DEFAULT
+
+                        header.content.order.dir:
+                          type: select
+                          label: PLUGIN_ADMIN.ORDER
+                          default: asc
+                          options:
+                            asc: PLUGIN_ADMIN.ASCENDING
+                            desc: PLUGIN_ADMIN.DESCENDING
+

@@ -1,0 +1,39 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block main %}
+  {% set background = page.header.images | split(',') %}
+  {% set  count = background | length - 1 %}
+  {% set rnd = random(0, count) %}
+  <section class="section-home">
+    <div class="slider" style="background-image: url('{{ page.media[background[rnd]].url }}')">
+      <div class="welcome">
+        <h1 class="heading">{{ page.header.heading }}</h1>
+        <span class="slogan">
+          {{ page.header.slogan }}
+        </span>
+        <div class="buttons">
+          {% if page.header.buttons %}
+            {% for button in page.header.buttons %}
+              <a href="{{ base_url_absolute }}{{ button.redirect }}" class="button button-white">{{ button.label }}</a>
+            {% endfor %}
+          {% endif %}
+        </div>
+      </div>
+
+
+      <span class="scroll-button">
+        <i class="fas fa-angle-double-down"></i>
+      </span>
+    </div>
+  </section>
+  <div class="container-home">
+    {% for module in page.collection() %}
+      <div class="home-row">
+        {{ module.content }}
+      </div>
+
+    {% endfor %}
+  </div>
+
+
+{% endblock %}

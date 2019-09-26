@@ -1,0 +1,69 @@
+title: last_entries
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+      fields:
+        inhalt:
+          type: tab
+          title: THEME_TRAVELER.ADMIN.TAB.CONTENT
+          fields:
+            header.title:
+              type: text
+              autofocus: true
+              label: THEME_TRAVELER.ADMIN.FIELDS.TITLE.LABEL
+            header.reference:
+              type: pages
+              size: medium
+              classes: fancy
+              label: THEME_TRAVELER.ADMIN.FIELDS.REFERENCE.LABEL
+              show_all: false
+              show_modular: false
+              show_root: false
+              validate:
+                required: true
+            header.slice:
+              type: toggle
+              label: THEME_TRAVELER.ADMIN.FIELDS.SLICE.LABEL
+              highlight: 0
+              default: 0
+              options:
+                0: THEME_TRAVELER.ADMIN.FIELDS.SLICE.OPTIONS.0
+                1: THEME_TRAVELER.ADMIN.FIELDS.SLICE.OPTIONS.1
+            header.buttonlabel:
+              type: text
+              autofocus: true
+              label: THEME_TRAVELER.ADMIN.FIELDS.BUTTONLABEL.LABEL
+              size: medium
+              help: THEME_TRAVELER.ADMIN.FIELDS.BUTTONLABEL.HELP
+            settings:
+              type: section
+              title: THEME_TRAVELER.ADMIN.SECTION.SETTINGS
+              underline: true
+              fields:
+                columns:
+                  type: columns
+                  fields:
+                    column1:
+                      type: column
+                      fields:
+                        header.icon:
+                          type: text
+                          label: THEME_TRAVELER.ADMIN.FIELDS.ICON.LABEL
+                          markdown: true
+                          description: THEME_TRAVELER.ADMIN.FIELDS.ICON.DESCRIPTION
+                          placeholder: 'address-book'
+                        header.showtitle:
+                          type: select
+                          label: THEME_TRAVELER.ADMIN.FIELDS.SHOWTITLE.LABEL
+                          highlight: 1
+                          default: 1
+                          options:
+                            0: THEME_TRAVELER.ADMIN.FIELDS.SHOWTITLE.OPTIONS.0
+                            1: THEME_TRAVELER.ADMIN.FIELDS.SHOWTITLE.OPTIONS.1
+                            2: THEME_TRAVELER.ADMIN.FIELDS.SHOWTITLE.OPTIONS.2
+                    column2:
+                      type: column
+                      fields:

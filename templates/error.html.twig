@@ -1,0 +1,12 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block main %}
+	{% set bg = page.header.image | first %}
+		<section class="page section-error">
+			<span class="errorcode">{{ page.header.http_response_code }}</span>
+			<div class="markdown">
+				{{ page.content|raw }}
+			</div>
+			<a href="{{ home_url }}" class="button button-white">zur Startseite</a>
+		</section>
+{% endblock %}

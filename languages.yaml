@@ -1,0 +1,230 @@
+de:
+  THEME_TRAVELER:
+    THEME:
+      SECTION:
+        SITE: 'Site Defaults'
+        HEADER: 'Header Defaults'
+      FIELDS:
+        FAVICON:
+          LABEL: 'Favicon'
+          DESCRIPTION: 'Wird anstelle von `theme://images/favicon.png` verwendet'
+        LOGO:
+          LABEL: 'Eigenes Logo'
+          DESCRIPTION: 'Wird anstelle von `theme://images/logo.svg` verwendet'
+        FIXED:
+          LABEL: 'Fixierter Header'
+          HELP: 'Wenn aktiviert wird der Header immer oben am Browserfenster sein.'
+    FRONTEND:
+      PROJEKTLINK: "mehr lesen"
+      OTHERPROJEKT: "Mehr Einträge"
+      CREATED: "Erstellt"
+      BACK: "zurück"
+      PREVIEW_IMAGE: "Vorschau Bild"
+    ADMIN:
+      TAB:
+        CONTENT: "Inhalt"
+      SECTION:
+        CONTENT: "Seiten Inhalt"
+        SETTINGS: "Einstellugen"
+        PREVIEW: "Vorschau"
+      FIELDS:
+        TITLE:
+          LABEL: "Titel"
+        SHOWTITLE:
+          LABEL: "Titel anzeigen?"
+          OPTIONS:
+            0: "Nein"
+            1: "Ja"
+            2: "Nur Platzhalter"
+        SLICE:
+          LABEL: "Text auf 180 Zeichen beschränken?"
+          OPTIONS:
+            0: "Nein"
+            1: "Ja"
+        GALLERIE:
+          LABEL: "Gallerie"
+        TEXT:
+          LABEL: "Text"
+        ENTRYSHOW:
+          LABEL: "Sichtbarkeit des Beitrags"
+          HELP: 'Wenn Versteckt so wird dieser Beitrag nicht in der Liste erscheinen, ist jedoch trozdem aufrufbar per URL'
+          OPTIONS:
+            0: "Versteckt"
+            1: "Sichtbar"
+        HEADING:
+          LABEL: "Überschrift"
+        SLOGAN:
+          LABEL: "Slogan"
+        REDIRECT:
+          LABEL: "Seite auswählen"
+        BUTTONS:
+          LABEL: "Buttons"
+        TAXONOMY:
+          LABEL: "Taxonomy"
+        IMAGE:
+          LABEL: "Bild"
+        IMAGES:
+          LABEL: "Bilder"
+        IMAGE_HEADER:
+          LABEL: "Header Bild"
+        DESCRIPTION:
+          LABEL: "Beschreibung"
+        PREVIEW_IMAGE:
+          LABEL: "Bild"
+          DESCRIPTION: "Die Bilder werden im Verhältnis 4:3 verkleinert und zugeschnitten."
+        PREVIEW_TEXT:
+          LABEL: "Kurze Einleitung"
+          OPTIONS:
+            0: "Nein"
+            1: "Ja"
+        PREVIEW_SHOW:
+          LABEL: "Auf der Detailseite anzeigen?"
+          OPTIONS:
+            0: "Nein"
+            1: "Ja"
+        YOUTUBE:
+          LABEL: "Video ID eingeben"
+          DESCRIPTION: "Beispiel: `VkvUH8vRQfE`"
+        COLUMN:
+          LABEL: 'Inhaltbreite'
+          OPTIONS:
+            1: "Einspaltig"
+            2: "Zweispaltig"
+        PAGINATION:
+          LABEL: 'Seitennummerierung'
+          OPTIONS:
+            0: "Nein"
+            1: "Ja"
+        LIMIT:
+          LABEL: 'Max Einträge pro Seite'
+          OPTIONS:
+            0: "Alle anzeigen"
+        SCALE:
+          LABEL: 'Format'
+          OPTIONS:
+            1: '4:3'
+            2: '16:9 (Full HD)'
+            3: '2.35:1 (Widescreen)'
+        ICON:
+          LABEL: 'Fontawesome Icon'
+          DESCRIPTION: '[zu den Fontawesome Icons](https://fontawesome.com/icons?d=gallery&s=solid&m=free&target=_blank) (Free & Solid)'
+        BUTTONLABEL:
+          LABEL: 'Button Bezeichnung'
+          HELP: 'Dies ist die bezeichnung des Buttons der auf die weiteren Einträge verlinkt. Wenn Leer so wird der Button nicht angezeigt.'
+en:
+  THEME_TRAVELER:
+    THEME:
+      SECTION:
+        SITE: 'Site Defaults'
+        HEADER: 'Header Defaults'
+      FIELDS:
+        FAVICON:
+          LABEL: 'Favicon'
+          DESCRIPTION: 'Used instead of `theme: // images / favicon.png`'
+        LOGO:
+          LABEL: 'Own logo'
+          DESCRIPTION: 'Used instead of `theme://images/logo.svg` verwendet'
+        FIXED:
+          LABEL: 'Fixed Header'
+          HELP: 'If activated, the header will always be at the top of the browser window.'
+    FRONTEND:
+      PROJEKTLINK: "read more"
+      OTHERPROJEKT: "more entries"
+      CREATED: "Created"
+      BACK: "back"
+      PREVIEW_IMAGE: "Preview image"
+    ADMIN:
+      TAB:
+        CONTENT: "Content"
+      SECTION:
+        CONTENT: "Pages content"
+        SETTINGS: "Settings"
+        PREVIEW: "Preview"
+      FIELDS:
+        TITLE:
+          LABEL: "Title"
+        SHOWTITLE:
+          LABEL: "Show title?"
+          OPTIONS:
+            0: "No"
+            1: "Yes"
+            2: "Only placeholder"
+        SLICE:
+          LABEL: "Limit text to 180 characters?"
+          OPTIONS:
+            0: "No"
+            1: "Yes"
+        GALLERIE:
+          LABEL: "Gallery"
+        TEXT:
+          LABEL: "Text"
+        ENTRYSHOW:
+          LABEL: "Visibility of the post"
+          HELP: 'If hidden, this post will not appear in the list, but is still callable via URL'
+          OPTIONS:
+            0: "Hidden"
+            1: "Visible"
+        HEADING:
+          LABEL: "Heading"
+        SLOGAN:
+          LABEL: "Slogan"
+        REDIRECT:
+          LABEL: "Select page"
+        BUTTONS:
+          LABEL: "Buttons"
+        TAXONOMY:
+          LABEL: "Taxonomy"
+        IMAGE:
+          LABEL: "Image"
+        IMAGES:
+          LABEL: "Images"
+        IMAGE_HEADER:
+          LABEL: "Header image"
+        DESCRIPTION:
+          LABEL: "Description"
+        PREVIEW_IMAGE:
+          LABEL: "Image"
+          DESCRIPTION: "The pictures are reduced in a ratio of 4: 3 and cropped."
+        PREVIEW_TEXT:
+          LABEL: "Short introduction"
+          OPTIONS:
+            0: "No"
+            1: "Yes"
+        PREVIEW_SHOW:
+          LABEL: "Show on the detail page?"
+          OPTIONS:
+            0: "No"
+            1: "Yes"
+        YOUTUBE:
+          LABEL: "Enter video ID"
+          DESCRIPTION: "Example: `VkvUH8vRQfE`"
+        COLUMN:
+          LABEL: 'content width'
+          OPTIONS:
+            1: "One column"
+            2: "two columns"
+        PAGINATION:
+          LABEL: 'Pagination'
+          OPTIONS:
+            0: "No"
+            1: "Yes"
+        LIMIT:
+          LABEL: 'Max entries per page'
+          OPTIONS:
+            0: "Show all"
+        SCALE:
+          LABEL: 'format'
+          OPTIONS:
+            1: '4:3'
+            2: '16:9 (Full HD)'
+            3: '2.35:1 (Widescreen)'
+        ICON:
+          LABEL: 'Fontawesome Icon'
+          DESCRIPTION: '[to the Fontawesome Icons](https://fontawesome.com/icons?d=gallery&s=solid&m=free&target=_blank) (Free & Solid)'
+        BUTTONLABEL:
+          LABEL: 'Button name'
+          HELP: 'This is the name of the button that links to the other entries. If empty, the button will not be displayed.'
+
+
+
+

@@ -1,0 +1,19 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block main %}
+    {% set bg = page.header.image | first %}
+    <section class="section-headerimage" style="background-image: url('{{ page.url(true) }}/header/{{ bg.name }}')">
+        <h1 class="heading">{{ page.header.title }}</h1>
+    </section>
+    <section class="page section-default">
+        <div class="row">
+            <div class="markdown col-12 col-md-6">
+                {{ page.content|raw }}
+            </div>
+            <div class="contactform col-12 col-md-6">
+                {% include "forms/form.html.twig" %}
+            </div>
+        </div>
+
+    </section>
+{% endblock %}

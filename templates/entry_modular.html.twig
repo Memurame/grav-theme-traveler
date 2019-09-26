@@ -1,0 +1,55 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block main %}
+  {% set bg = page.header.image | first %}
+  <section class="section-headerimage" style="background-image: url('{{ page.media[bg.name].url }}')">
+    <h1 class="heading">{{ page.header.title }}</h1>
+  </section>
+  <section class="page section-entry">
+    <div class="actionbar">
+      <div class="path">
+        <a href="{{ page.parent().url() }}" class="back"><i class="fas fa-reply"></i> zurück</a>
+      </div>
+      </nav>
+      <span class="date"><i class="fas fa-calendar-alt"></i> {{ page.date() | date('d. m. Y') }}</span>
+    </div>
+    <article class="content">
+      {% if page.header.preview.show %}
+        <article class="detail-preview">
+          <div class="preview-image">
+            {% if page.header.preview.image %}
+              {% set preview_image = page.header.preview.image | first %}
+              {{ page.media[preview_image.name].cropZoom(600,450).html('', page.header.title) }}
+            {% else %}
+              <img src="{{ theme_url }}/images/default_image.jpg" alt="{{ page.header.title }}">
+            {% endif %}
+          </div>
+          <div class="preview-desc">
+            <p>{{ page.header.preview.text }}</p>
+          </div>
+        </article>
+      {% endif %}
+      <div class="row">
+        {% for module in page.collection() %}
+          {{ module.content }}
+        {% endfor %}
+      </div>
+
+
+
+      <footer>
+        {% if  page.taxonomy.tag %}
+          <div class="tags">
+            {% for tag in page.taxonomy.tag %}
+              <a href="{{ page.parent().url() }}/tag{{ config.system.param_sep }}{{ tag }}">
+                <span class="entry-tag">{{ tag }}</span>
+              </a>
+            {% endfor %}
+          </div>
+        {% endif %}
+        {% include 'partials/socialshare.html.twig' %}
+      </footer>
+    </article>
+  </section>
+
+{% endblock %}

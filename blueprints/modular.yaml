@@ -1,0 +1,60 @@
+title: modular
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+      fields:
+        inhalt:
+          type: tab
+          title: THEME_TRAVELER.ADMIN.TAB.CONTENT
+          fields:
+            header.title:
+              type: text
+              autofocus: true
+              label: THEME_TRAVELER.ADMIN.FIELDS.TITLE.LABEL
+            header.image:
+              type: file
+              label: "Header Bild"
+              destination: '@self'
+              accept:
+                - image/*
+            settings:
+              type: section
+              title: THEME_TRAVELER.ADMIN.SECTION.SETTINGS
+              underline: true
+              fields:
+                header.content.items:
+                  type: select
+                  label: PLUGIN_ADMIN.ITEMS
+                  default: '@self.modular'
+                  options:
+                    '@self.modular': Modular Children
+
+                header.content.order.by:
+                  type: select
+                  label: PLUGIN_ADMIN.ORDER_BY
+                  default: folder
+                  options:
+                    folder: PLUGIN_ADMIN.FOLDER
+                    title: PLUGIN_ADMIN.TITLE
+                    date: PLUGIN_ADMIN.DATE
+                    default: PLUGIN_ADMIN.DEFAULT
+
+                header.content.order.dir:
+                  type: select
+                  label: PLUGIN_ADMIN.ORDER
+                  default: asc
+                  options:
+                    asc: PLUGIN_ADMIN.ASCENDING
+                    desc: PLUGIN_ADMIN.DESCENDING
+                header.sociallink:
+                  type: toggle
+                  label: 'Socialmedia Links'
+                  default: 1
+                  highlight: 1
+                  options:
+                    0: 'Verstecken'
+                    1: 'Anzeigen'
+

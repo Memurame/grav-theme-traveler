@@ -1,0 +1,10 @@
+<section class="modular section-textpack">
+  <div class="row">
+    {% for module in page.children().published() %}
+
+      {{ module.content }}
+
+    {% endfor %}
+  </div>
+
+</section>

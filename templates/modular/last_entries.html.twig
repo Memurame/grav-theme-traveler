@@ -1,0 +1,47 @@
+{% set projectpage = page.find(page.header.reference) %}
+
+
+
+<article class="modular section-lastentries">
+  {% if page.header.icon %}<span class="heading-icon"><i class="fas fa-{{ page.header.icon }}"></i></span>{% endif %}
+  {% if page.header.showtitle %}<h2 class="heading">{{ page.header.title }}</h2>{% endif %}
+  <article class="content entrylist">
+    {% for item in projectpage.children().published().order('date','desc') | slice(0, 3) %}
+      {% if item.template()  | slice(0, 5) == 'entry' and item.header.show %}
+        <article class="entry-item">
+          <div class="item-date">
+            <i class="fas fa-calendar-alt"></i> {{ item.date() | date('d. m. Y') }}
+          </div>
+          <div class="item-image">
+            {% if item.header.preview.image %}
+              {% set preview_image = item.header.preview.image | first %}
+              {% if  item.template() == 'entry_default' %}
+                {{ item.media[item.header.preview.image].cropZoom(600,450).html('', item.header.title) }}
+              {% else %}
+                {{ item.media[preview_image.name].cropZoom(600,450).html('', item.header.title) }}
+              {% endif %}
+            {% else %}
+              <img src="{{ theme_url }}/images/default_image.jpg" alt="{{ item.header.title }}">
+            {% endif %}
+
+          </div>
+          <div class="item-desc">
+            <strong class="title">{{ item.header.title }}</strong>
+            {% if page.header.slice %}
+              <p>{{ item.header.preview.text | slice(0, 180) }}
+                  {% if item.header.preview.text|length > 180 %}....{% endif %}
+              </p>
+            {% else %}
+              <p>{{ item.header.preview.text }}</p>
+            {% endif %}
+          </div>
+          <a href="{{ item.url() }}"><i class="fas fa-external-link-alt"></i> {{ "THEME_TRAVELER.FRONTEND.PROJEKTLINK" | t  }}</a>
+        </article>
+      {% endif %}
+
+    {% endfor %}
+  </article>
+  {% if page.header.buttonlabel %}
+    <a href="{{ base_url_absolute }}/{{ page.header.reference[1:] }}" class="button button-white"><i class="fas fa-external-link-alt"></i> {{ page.header.buttonlabel }}</a>
+  {% endif %}
+</article>

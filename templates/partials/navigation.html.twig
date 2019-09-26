@@ -1,0 +1,17 @@
+
+<nav>
+  <ul>
+    {% for p in pages.children.visible %}
+      {% set current_page = (p.active or p.activeChild) ? 'active' : '' %}
+      {% if p.home() == false %}
+        <li>
+          <a href="{{ p.url }}" class="{{ current_page }}">
+            {{ p.menu }}
+          </a>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</nav>
+
+

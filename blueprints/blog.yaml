@@ -1,0 +1,77 @@
+title: blog
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+      fields:
+        inhalt:
+          type: tab
+          title: THEME_TRAVELER.ADMIN.TAB.CONTENT
+          fields:
+            header.title:
+              type: text
+              autofocus: true
+              label: THEME_TRAVELER.ADMIN.FIELDS.TITLE.LABEL
+            header.image:
+              type: file
+              label: THEME_TRAVELER.ADMIN.FIELDS.IMAGE_HEADER.LABEL
+              destination: '@self'
+              accept:
+                - image/*
+            settings:
+              type: section
+              title: THEME_TRAVELER.ADMIN.SECTION.SETTINGS
+              underline: true
+              fields:
+                columns:
+                  type: columns
+                  fields:
+                    column1:
+                      type: column
+                      fields:
+                        header.content.items:
+                          type: select
+                          label: PLUGIN_ADMIN.ITEMS
+                          default: '@self.children'
+                          options:
+                            '@self.children': Unterseiten
+                        header.content.order.by:
+                          type: select
+                          label: PLUGIN_ADMIN.ORDER_BY
+                          default: date
+                          options:
+                            folder: PLUGIN_ADMIN.FOLDER
+                            title: PLUGIN_ADMIN.TITLE
+                            date: PLUGIN_ADMIN.DATE
+                            default: PLUGIN_ADMIN.DEFAULT
+
+                        header.content.order.dir:
+                          type: select
+                          label: PLUGIN_ADMIN.ORDER
+                          default: desc
+                          options:
+                            asc: PLUGIN_ADMIN.ASCENDING
+                            desc: PLUGIN_ADMIN.DESCENDING
+                    column2:
+                      type: column
+                      fields:
+                        header.content.pagination:
+                          type: toggle
+                          label: THEME_TRAVELER.ADMIN.FIELDS.PAGINATION.LABEL
+                          default: 1
+                          highlight: 1
+                          options:
+                            0: THEME_TRAVELER.ADMIN.FIELDS.PAGINATION.OPTIONS.0
+                            1: THEME_TRAVELER.ADMIN.FIELDS.PAGINATION.OPTIONS.1
+                        header.content.limit:
+                          type: select
+                          label: THEME_TRAVELER.ADMIN.FIELDS.LIMIT.LABEL
+                          default: 10
+                          options:
+                            10: 10
+                            50: 50
+                            100: 100
+                            0: THEME_TRAVELER.ADMIN.FIELDS.LIMIT.OPTIONS.0
+

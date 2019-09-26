@@ -1,0 +1,16 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block main %}
+  {% set bg = page.header.image | first %}
+  <section class="section-headerimage" style="background-image: url('{{ page.media[bg.name].url }}')">
+    <h1 class="heading">{{ page.header.title }}</h1>
+  </section>
+  <section class="page section-modular">
+    <div class="row">
+      {% for module in page.collection() %}
+        {{ module.content }}
+      {% endfor %}
+    </div>
+  </section>
+
+{% endblock %}
