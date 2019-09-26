@@ -14,7 +14,6 @@ $(document).ready(function() {
         });
         $('.section-image').find('div').each(function(i, v){
             let scale = $(this).data('scale');
-            console.log(scale);
             let imageheight = $(this).width() * scale;
             $(this).css('height', imageheight);
         });

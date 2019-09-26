@@ -17415,16 +17415,18 @@ a:hover {
 
 .site-content .page footer .share {
   text-align: right;
+  background-color: #FBFFFA;
 }
 
 .site-content .page footer .share button {
   border: 0;
-  padding: 0;
+  padding: 0 3px;
   outline-style: none;
+  background-color: transparent;
 }
 
-.site-content .page footer .share button img {
-  width: 24px;
+.site-content .page footer .share button i {
+  font-size: 22px;
 }
 
 @media (max-width: 991.98px) {

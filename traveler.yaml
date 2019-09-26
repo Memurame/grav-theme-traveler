@@ -1,1 +1,8 @@
 enabled: true
+header:
+  fixed: true
+social:
+  twitter: true
+  facebook: true
+  linkedin: true
+  whatsapp: true

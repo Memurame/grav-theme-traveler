@@ -1,21 +1,29 @@
 
 <div class="share">
-    <button data-sharer="twitter"
-            data-title="{{ page.header.title }}"
-            data-url="{{ page.url(true) }}">
-        <img src="{{ theme_url }}/images/social/twitter.png" alt="twitter">
-    </button>
-    <button data-sharer="facebook"
-            data-url="{{ page.url(true) }}">
-        <img src="{{ theme_url }}/images/social/facebook.png" alt="facebook">
-    </button>
-    <button data-sharer="linkedin"
-            data-url="{{ page.url(true) }}">
-        <img src="{{ theme_url }}/images/social/linkedin.png" alt="linkedin">
-    </button>
-    <button data-sharer="whatsapp"
-            data-title="{{ page.header.title }}"
-            data-url="{{ page.url(true) }}">
-        <img src="{{ theme_url }}/images/social/whatsapp.png" alt="whatsapp">
-    </button>
+    {% if theme_var('social.twitter') %}
+        <button data-sharer="twitter"
+                data-title="{{ page.header.title }}"
+                data-url="{{ page.url(true) }}">
+            <i class="fab fa-twitter"></i>
+        </button>
+    {% endif %}
+    {% if theme_var('social.facebook') %}
+        <button data-sharer="facebook"
+                data-url="{{ page.url(true) }}">
+            <i class="fab fa-facebook-f"></i>
+        </button>
+    {% endif %}
+    {% if theme_var('social.linkedin') %}
+        <button data-sharer="linkedin"
+                data-url="{{ page.url(true) }}">
+            <i class="fab fa-linkedin-in"></i>
+        </button>
+    {% endif %}
+    {% if theme_var('social.whatsapp') %}
+        <button data-sharer="whatsapp"
+                data-title="{{ page.header.title }}"
+                data-url="{{ page.url(true) }}">
+            <i class="fab fa-whatsapp"></i>
+        </button>
+    {% endif %}
 </div>

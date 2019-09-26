@@ -1,17 +1,15 @@
 ---
 title: 'Default entry'
-taxonomy:
-    category:
-        - blog
-        - blog
-    tag:
-        - street
-        - street
 preview:
     show: '0'
     image: Awesome-new-york-lights-wallpaper-hd.jpg
     text: 'This is an example **standard** page, where content from one single page is displayed. This page also shows how to add classes to Markdown images for floating images left or right, with and without captions.'
 show: true
+taxonomy:
+    category:
+        - blog
+    tag:
+        - street
 image:
     user/pages/02.blog/default-entry/header/New-York-City-Street-Wallpapers.jpg:
         name: New-York-City-Street-Wallpapers.jpg

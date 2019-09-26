@@ -51,37 +51,37 @@ I have an example in the `_demo / pages / 05.contact` folder.
 If you want to know more about creating a contact form
 I refer to the [Grav documentation](https://learn.getgrav.org/16/forms/forms/example-form?target=_blank)
 
-## Home
+### Home
 
 A separate template for the home page
 
-## Modular
+### Modular
 
 This template is intended for pages and can also be built with any modules.
 
-## Gallerie (Modular)
+### Gallerie (Modular)
 
 With this module you can create small galleries.
 The gallery will also open a big preview when clicking on a picture.
 
-## Image (Modular)
+### Image (Modular)
 This module is used to insert an image
 
-## Last Entries (Modular)
+### Last Entries (Modular)
 
 This module displays the last three entries of the blog.
 It can be selected which subpages should be considered.
 Originally intended for the home page
 
-## Modul Container (Modular)
+### Modul Container (Modular)
 
 I have created this module as help for the start page.
 With this module, several text blocks can be combined into one on the start page.
 How exactly does that work you see in the example.
 
-## Text (Modular)
+### Text (Modular)
 Hereby a text can be inserted, it is handled as markdown.
 
-## Youtube (Modular)
+### Youtube (Modular)
 
 Simply insert a Youtube video by the ID.

@@ -621,12 +621,14 @@ a{
       }
       .share{
         text-align: right;
+        background-color: $color5;
         button{
           border: 0;
-          padding: 0;
+          padding: 0 3px;
           outline-style: none;
-          img{
-            width: 24px;
+          background-color: transparent;
+          i{
+            font-size: 22px;
           }
         }
       }

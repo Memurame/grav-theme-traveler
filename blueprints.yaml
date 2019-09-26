@@ -1,5 +1,5 @@
 name: "Traveler"
-version: 1.0.0
+version: 1.0.1
 description: "A theme for travelers or anyone who likes a modern website and wants to share their experiences with others."
 icon: id-card-o
 keywords: travel, traveling, blog, modular
@@ -14,7 +14,6 @@ demo: https://demo.hirter.dev/grav/traveler
 dependencies:
   - { name: grav, version: '>=1.6.0' }
   - auto-date
-  - sharer
   - taxonomylist
   - pagination
 form:
@@ -57,8 +56,53 @@ form:
           highlight: 1
           default: 1
           options:
-            1: PLUGIN_ADMIN.ENABLED
             0: PLUGIN_ADMIN.DISABLED
+            1: PLUGIN_ADMIN.ENABLED
+          validate:
+            type: bool
+    social_section:
+      type: section
+      title: 'Social Share'
+      underline: true
+      fields:
+        social.twitter:
+          type: toggle
+          label: 'Twitter'
+          highlight: 1
+          default: 1
+          options:
+            0: PLUGIN_ADMIN.DISABLED
+            1: PLUGIN_ADMIN.ENABLED
+          validate:
+            type: bool
+        social.facebook:
+          type: toggle
+          label: 'Facebook'
+          highlight: 1
+          default: 1
+          options:
+            0: PLUGIN_ADMIN.DISABLED
+            1: PLUGIN_ADMIN.ENABLED
+          validate:
+            type: bool
+        social.linkedin:
+          type: toggle
+          label: 'LinkedIn'
+          highlight: 1
+          default: 1
+          options:
+            0: PLUGIN_ADMIN.DISABLED
+            1: PLUGIN_ADMIN.ENABLED
+          validate:
+            type: bool
+        social.whatsapp:
+          type: toggle
+          label: 'Whatsapp'
+          highlight: 1
+          default: 1
+          options:
+            0: PLUGIN_ADMIN.DISABLED
+            1: PLUGIN_ADMIN.ENABLED
           validate:
             type: bool
 
