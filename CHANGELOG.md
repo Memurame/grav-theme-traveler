@@ -1,3 +1,9 @@
+# v1.0.2
+## 27-09-2019
+
+1. [](#fix)
+    * Link to detail on last-entries (modular) not working
+
 # v1.0.1
 ## 26-09-2019
 

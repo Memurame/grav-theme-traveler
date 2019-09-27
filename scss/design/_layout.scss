@@ -658,44 +658,39 @@ a{
   .page.section-entrylist{
     @include make-container-max-widths();
     margin: 0 auto;
-    .entry-filters{
-      flex:1 ;
-      .filter-button{
-        text-decoration: underline;
-        background: none;
-        position: relative;
-        border: 0;
-        cursor: pointer;
-        display: inline;
+    display: flex;
+    flex-flow: row;
+    .taglist{
+      width: 200px;
+      text-align: right;
+      strong{
+        font-weight: bold;
         color: $color3;
-        outline-style: none;
-        margin-right: 4px;
-        padding: 0;
-        &:hover, &.active{
-          color: $color2;
-        }
+        font-size: 20px;
+        margin-bottom: 1rem;
+        display: block;
+      }
+      .entry-filters{
+        .filter-button{
+          background: none;
+          position: relative;
+          border: 0;
+          cursor: pointer;
+          display: block;
+          color: $color3;
+          outline-style: none;
+          margin-right: 4px;
+          padding: 0 0 0 2rem;
+          font-size: 16px;
+          &:hover, &.active{
+            color: $color2;
+          }
 
-      }
-    }
-    .entry-search{
-      display: none;
-      input{
-        outline-style: none;
-        border: 1px solid $color3;
-        padding-left: 3px;
-      }
-    }
-    @include media-breakpoint-down(sm) {
-      display: block;
-      .entry-search{
-        margin-top: 0.75rem;
-        input{
-          width: 100%;
         }
       }
     }
-
     .content{
+      flex: 1;
       display: flex;
       flex-flow: column;
       border-top: 1px solid $color3;

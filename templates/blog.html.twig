@@ -7,12 +7,6 @@
         <h1 class="heading">{{ page.header.title }}</h1>
     </section>
     <section class="page section-entrylist">
-        <div class="actionbar">
-            {% include 'partials/taxonomylist.html.twig' with {base_url: page.url(), taxonomy: 'tag', children_only: true} %}
-            <div class="entry-search">
-                <input type="text" placeholder="Suche...">
-            </div>
-        </div>
         <article class="content layout-{{ page.header.layout }}">
             {% for item in collection %}
                 {% if item.template()  | slice(0, 5) == 'entry' and item.header.show %}
@@ -55,6 +49,10 @@
 
             {% endfor %}
         </article>
+        <aside class="taglist">
+          <strong>Katergorien:</strong>
+          {% include 'partials/taxonomylist.html.twig' with {base_url: page.url(), taxonomy: 'tag', children_only: true} %}
+        </aside>
       {% if config.plugins.pagination.enabled and collection.params.pagination %}
         {% include 'partials/pagination.html.twig' with {'base_url':page.url, 'pagination':collection.params.pagination} %}
       {% endif %}
