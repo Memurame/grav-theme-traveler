@@ -1,4 +1,5 @@
 {% set projectpage = page.find(page.header.reference) %}
+{% set collection = projectpage.collection().published() %}
 
 
 
@@ -6,8 +7,8 @@
   {% if page.header.icon %}<span class="heading-icon"><i class="fas fa-{{ page.header.icon }}"></i></span>{% endif %}
   {% if page.header.showtitle %}<h2 class="heading">{{ page.header.title }}</h2>{% endif %}
   <article class="content entrylist">
-    {% for item in projectpage.children().published().order('date','desc') | slice(0, 3) %}
-      {% if item.template()  | slice(0, 5) == 'entry' and item.header.show %}
+    {% for item in collection.visible | slice(0, 3) %}
+      {% if item.template()  | slice(0, 5) == 'entry' %}
         <article class="entry-item">
           <div class="item-date">
             <i class="fas fa-calendar-alt"></i> {{ item.date() | date('d. m. Y') }}
@@ -35,7 +36,7 @@
               <p>{{ item.header.preview.text }}</p>
             {% endif %}
           </div>
-          <a href="{{ item.url() }}"><i class="fas fa-external-link-alt"></i> {{ "THEME_TRAVELER.FRONTEND.PROJEKTLINK" | t  }}</a>
+          <a href="{{ item.url() }}" class="link-detail"><i class="fas fa-external-link-alt"></i> {{ "THEME_TRAVELER.FRONTEND.PROJEKTLINK" | t  }}</a>
         </article>
       {% endif %}
 

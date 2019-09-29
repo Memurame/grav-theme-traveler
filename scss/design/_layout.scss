@@ -117,15 +117,19 @@ a{
   span{
     border-radius: 1px;
     display: inline-block;
-    padding: .25em .4em;
+    padding: .35em .6em;
     font-size: 75%;
     font-weight: 700;
     line-height: 1;
     text-align: center;
     white-space: nowrap;
     vertical-align: baseline;
-    color: $color3;
-    background-color: $color1;
+    color: $color4;
+    border: 1px solid $color4;
+    &:hover{
+      color: $color5;
+      background-color: $color4;
+    }
   }
 }
 .pagination{
@@ -658,44 +662,39 @@ a{
   .page.section-entrylist{
     @include make-container-max-widths();
     margin: 0 auto;
-    .entry-filters{
-      flex:1 ;
-      .filter-button{
-        text-decoration: underline;
-        background: none;
-        position: relative;
-        border: 0;
-        cursor: pointer;
-        display: inline;
+    display: flex;
+    flex-flow: row;
+    .taglist{
+      width: 200px;
+      text-align: right;
+      strong{
+        font-weight: bold;
         color: $color3;
-        outline-style: none;
-        margin-right: 4px;
-        padding: 0;
-        &:hover, &.active{
-          color: $color2;
-        }
+        font-size: 20px;
+        margin-bottom: 1rem;
+        display: block;
+      }
+      .entry-filters{
+        .filter-button{
+          background: none;
+          position: relative;
+          border: 0;
+          cursor: pointer;
+          display: block;
+          color: $color3;
+          outline-style: none;
+          margin-right: 4px;
+          padding: 0 0 0 2rem;
+          font-size: 16px;
+          &:hover, &.active{
+            color: $color2;
+          }
 
-      }
-    }
-    .entry-search{
-      display: none;
-      input{
-        outline-style: none;
-        border: 1px solid $color3;
-        padding-left: 3px;
-      }
-    }
-    @include media-breakpoint-down(sm) {
-      display: block;
-      .entry-search{
-        margin-top: 0.75rem;
-        input{
-          width: 100%;
         }
       }
     }
-
     .content{
+      flex: 1;
       display: flex;
       flex-flow: column;
       border-top: 1px solid $color3;
@@ -727,7 +726,7 @@ a{
           position: absolute;
           top: 16px;
           right: 0;
-          font-size: 14px;
+          font-size: 18px;
           color: $color3;
           padding: 0 4px;
           font-weight: 300;
@@ -756,6 +755,29 @@ a{
             line-height: 100%;
           }
         }
+      }
+    }
+    @include media-breakpoint-down(md) {
+      flex-flow: column;
+      .taglist{
+        order: 1;
+        width: 100%;
+        text-align: left;
+        margin-bottom: 1rem;
+        strong{
+          display: none;
+        }
+        .entry-filters {
+          .filter-button {
+            display: inline;
+            padding: 0;
+
+          }
+        }
+
+      }
+      .content{
+        order: 2;
       }
     }
 
@@ -909,10 +931,10 @@ a{
           position: absolute;
           right: 0;
           top: 0;
-          padding: 3px;
+          padding: 5px;
           background-color: $color3;
           color: $color5;
-          font-size: 14px;
+          font-size: 18px;
           line-height: 100%;
         }
       }

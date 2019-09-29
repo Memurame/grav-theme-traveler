@@ -15,11 +15,10 @@ form:
               autofocus: true
               label: THEME_TRAVELER.ADMIN.FIELDS.TITLE.LABEL
             header.image:
-              type: file
-              label: THEME_TRAVELER.ADMIN.FIELDS.IMAGE_HEADER.LABEL
-              destination: '@self/header'
-              accept:
-                - image/*
+              type: filepicker
+              label: THEME_TRAVELER.ADMIN.FIELDS.PREVIEW_IMAGE.LABEL
+              folder: '@self'
+              preview_images: true
             content:
               type: markdown
               validate:

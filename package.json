@@ -32,7 +32,8 @@
     "lg-video": "^1.2.2",
     "lg-zoom": "^1.1.0",
     "lightgallery": "^1.6.12",
-    "lightslider": "^1.1.6"
+    "lightslider": "^1.1.6",
+    "sharer.js": "^0.3.8"
   },
   "devDependencies": {
     "gulp": "^4.0.2",

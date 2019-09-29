@@ -10432,6 +10432,10 @@ readers do not read off random characters that represent icons */
   content: "\f64a";
 }
 
+.fa-buy-n-large:before {
+  content: "\f8a6";
+}
+
 .fa-buysellads:before {
   content: "\f20d";
 }
@@ -12244,6 +12248,14 @@ readers do not read off random characters that represent icons */
   content: "\f292";
 }
 
+.fa-hat-cowboy:before {
+  content: "\f8c0";
+}
+
+.fa-hat-cowboy-side:before {
+  content: "\f8c1";
+}
+
 .fa-hat-wizard:before {
   content: "\f6e8";
 }
@@ -12884,6 +12896,10 @@ readers do not read off random characters that represent icons */
   content: "\f136";
 }
 
+.fa-mdb:before {
+  content: "\f8ca";
+}
+
 .fa-medal:before {
   content: "\f5a2";
 }
@@ -13068,6 +13084,10 @@ readers do not read off random characters that represent icons */
   content: "\f6fc";
 }
 
+.fa-mouse:before {
+  content: "\f8cc";
+}
+
 .fa-mouse-pointer:before {
   content: "\f245";
 }
@@ -13174,6 +13194,10 @@ readers do not read off random characters that represent icons */
 
 .fa-optin-monster:before {
   content: "\f23c";
+}
+
+.fa-orcid:before {
+  content: "\f8d2";
 }
 
 .fa-osi:before {
@@ -13630,6 +13654,10 @@ readers do not read off random characters that represent icons */
 
 .fa-receipt:before {
   content: "\f543";
+}
+
+.fa-record-vinyl:before {
+  content: "\f8d9";
 }
 
 .fa-recycle:before {
@@ -14416,6 +14444,10 @@ readers do not read off random characters that represent icons */
   content: "\f5c3";
 }
 
+.fa-swift:before {
+  content: "\f8e1";
+}
+
 .fa-swimmer:before {
   content: "\f5c4";
 }
@@ -14794,6 +14826,10 @@ readers do not read off random characters that represent icons */
 
 .fa-uikit:before {
   content: "\f403";
+}
+
+.fa-umbraco:before {
+  content: "\f8e8";
 }
 
 .fa-umbrella:before {
@@ -15329,7 +15365,7 @@ readers do not read off random characters that represent icons */
 }
 
 /*!
- * Font Awesome Free 5.10.2 by @fontawesome - https://fontawesome.com
+ * Font Awesome Free 5.11.2 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
 @font-face {
@@ -15346,7 +15382,7 @@ readers do not read off random characters that represent icons */
 }
 
 /*!
- * Font Awesome Free 5.10.2 by @fontawesome - https://fontawesome.com
+ * Font Awesome Free 5.11.2 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
 @font-face {
@@ -15365,7 +15401,7 @@ readers do not read off random characters that represent icons */
 }
 
 /*!
- * Font Awesome Free 5.10.2 by @fontawesome - https://fontawesome.com
+ * Font Awesome Free 5.11.2 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
 @font-face {
@@ -16871,15 +16907,20 @@ a:hover {
 .tags span {
   border-radius: 1px;
   display: inline-block;
-  padding: .25em .4em;
+  padding: .35em .6em;
   font-size: 75%;
   font-weight: 700;
   line-height: 1;
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
-  color: #1E2339;
-  background-color: #DCCD56;
+  color: #0DA8AF;
+  border: 1px solid #0DA8AF;
+}
+
+.tags span:hover {
+  color: #FBFFFA;
+  background-color: #0DA8AF;
 }
 
 .pagination {
@@ -17454,6 +17495,8 @@ a:hover {
 
 .site-content .page.section-entrylist {
   margin: 0 auto;
+  display: flex;
+  flex-flow: row;
 }
 
 @media (min-width: 576px) {
@@ -17480,50 +17523,38 @@ a:hover {
   }
 }
 
-.site-content .page.section-entrylist .entry-filters {
-  flex: 1;
+.site-content .page.section-entrylist .taglist {
+  width: 200px;
+  text-align: right;
 }
 
-.site-content .page.section-entrylist .entry-filters .filter-button {
-  text-decoration: underline;
+.site-content .page.section-entrylist .taglist strong {
+  font-weight: bold;
+  color: #1E2339;
+  font-size: 20px;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.site-content .page.section-entrylist .taglist .entry-filters .filter-button {
   background: none;
   position: relative;
   border: 0;
   cursor: pointer;
-  display: inline;
+  display: block;
   color: #1E2339;
   outline-style: none;
   margin-right: 4px;
-  padding: 0;
+  padding: 0 0 0 2rem;
+  font-size: 16px;
 }
 
-.site-content .page.section-entrylist .entry-filters .filter-button:hover, .site-content .page.section-entrylist .entry-filters .filter-button.active {
+.site-content .page.section-entrylist .taglist .entry-filters .filter-button:hover, .site-content .page.section-entrylist .taglist .entry-filters .filter-button.active {
   color: #EE7B64;
 }
 
-.site-content .page.section-entrylist .entry-search {
-  display: none;
-}
-
-.site-content .page.section-entrylist .entry-search input {
-  outline-style: none;
-  border: 1px solid #1E2339;
-  padding-left: 3px;
-}
-
-@media (max-width: 869.98px) {
-  .site-content .page.section-entrylist {
-    display: block;
-  }
-  .site-content .page.section-entrylist .entry-search {
-    margin-top: 0.75rem;
-  }
-  .site-content .page.section-entrylist .entry-search input {
-    width: 100%;
-  }
-}
-
 .site-content .page.section-entrylist .content {
+  flex: 1;
   display: flex;
   flex-flow: column;
   border-top: 1px solid #1E2339;
@@ -17561,7 +17592,7 @@ a:hover {
   position: absolute;
   top: 16px;
   right: 0;
-  font-size: 14px;
+  font-size: 18px;
   color: #1E2339;
   padding: 0 4px;
   font-weight: 300;
@@ -17587,6 +17618,28 @@ a:hover {
     background-color: #1E2339;
     color: #FBFFFA;
     line-height: 100%;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .site-content .page.section-entrylist {
+    flex-flow: column;
+  }
+  .site-content .page.section-entrylist .taglist {
+    order: 1;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 1rem;
+  }
+  .site-content .page.section-entrylist .taglist strong {
+    display: none;
+  }
+  .site-content .page.section-entrylist .taglist .entry-filters .filter-button {
+    display: inline;
+    padding: 0;
+  }
+  .site-content .page.section-entrylist .content {
+    order: 2;
   }
 }
 
@@ -17852,10 +17905,10 @@ a:hover {
   position: absolute;
   right: 0;
   top: 0;
-  padding: 3px;
+  padding: 5px;
   background-color: #1E2339;
   color: #FBFFFA;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 100%;
 }
 

@@ -1,12 +1,7 @@
 ---
 title: Default
+image: Blurred-city-street-world-wallpaper.jpg
 media_order: 'Awesome-new-york-lights-wallpaper-hd.jpg,Dark-newyork-city-wallpaper.jpg,Blurred-city-street-world-wallpaper.jpg'
-image:
-    user/pages/03.default/header/New-York-City-Street-Wallpapers-HD.jpg:
-        name: New-York-City-Street-Wallpapers-HD.jpg
-        type: image/jpeg
-        size: 821901
-        path: user/pages/03.default/header/New-York-City-Street-Wallpapers-HD.jpg
 ---
 
 This is an example **standard** page, where content from one single page is displayed. This page also shows how to add classes to Markdown images for floating images left or right, with and without captions.

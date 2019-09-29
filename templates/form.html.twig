@@ -1,8 +1,7 @@
 {% extends 'partials/base.html.twig' %}
 
 {% block main %}
-    {% set bg = page.header.image | first %}
-    <section class="section-headerimage" style="background-image: url('{{ page.url(true) }}/header/{{ bg.name }}')">
+    <section class="section-headerimage" style="background-image: url('{{ page.media[page.header.image].cropZoom(1920,450).url }}')">
         <h1 class="heading">{{ page.header.title }}</h1>
     </section>
     <section class="page section-default">

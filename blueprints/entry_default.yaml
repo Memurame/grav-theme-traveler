@@ -14,31 +14,16 @@ form:
               type: text
               autofocus: true
               label: THEME_TRAVELER.ADMIN.FIELDS.TITLE.LABEL
-            header.image:
-              type: file
-              label: THEME_TRAVELER.ADMIN.FIELDS.IMAGE_HEADER.LABEL
-              destination: '@self/header'
-              accept:
-                - image/*
             preview:
               type: section
               title: THEME_TRAVELER.ADMIN.SECTION.PREVIEW
               underline: true
               fields:
-                header.preview.show:
-                  type: toggle
-                  label: THEME_TRAVELER.ADMIN.FIELDS.PREVIEW_SHOW.LABEL
-                  highlight: 1
-                  default: 1
-                  options:
-                    0: THEME_TRAVELER.ADMIN.FIELDS.PREVIEW_SHOW.OPTIONS.0
-                    1: THEME_TRAVELER.ADMIN.FIELDS.PREVIEW_SHOW.OPTIONS.1
                 header.preview.image:
                   type: filepicker
                   label: THEME_TRAVELER.ADMIN.FIELDS.PREVIEW_IMAGE.LABEL
                   folder: '@self'
                   preview_images: true
-                  description: THEME_TRAVELER.ADMIN.FIELDS.PREVIEW_IMAGE.DESCRIPTION
                 header.preview.text:
                   type: textarea
                   rows: 6
@@ -52,25 +37,4 @@ form:
             header.media_order:
               type: pagemedia
               label: PLUGIN_ADMIN.PAGE_MEDIA
-            settings:
-              type: section
-              title: THEME_TRAVELER.ADMIN.SECTION.SETTINGS
-              underline: true
-              fields:
-                columns:
-                  type: columns
-                  fields:
-                    column1:
-                      type: column
-                      fields:
-                        header.show:
-                          type: toggle
-                          label: THEME_TRAVELER.ADMIN.FIELDS.ENTRYSHOW.LABEL
-                          help: THEME_TRAVELER.ADMIN.FIELDS.ENTRYSHOW.HELP
-                          highlight: 1
-                          default: 1
-                          options:
-                            0: THEME_TRAVELER.ADMIN.FIELDS.ENTRYSHOW.OPTIONS.0
-                            1: THEME_TRAVELER.ADMIN.FIELDS.ENTRYSHOW.OPTIONS.1
-                          validate:
-                            type: bool
+
