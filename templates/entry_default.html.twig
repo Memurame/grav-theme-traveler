@@ -2,7 +2,7 @@
 
 {% block main %}
     {% set bg = page.header.image | first %}
-    <section class="section-headerimage" style="background-image: url('{{ page.url(true) }}/header/{{ bg.name }}')">
+    <section class="section-headerimage" style="background-image: url('{{ page.media[page.header.preview.image].cropZoom(1920,450).url }}')">
         <h1 class="heading">{{ page.header.title }}</h1>
     </section>
     <section class="page section-entry">
@@ -14,20 +14,6 @@
             <span class="date"><i class="fas fa-calendar-alt"></i> {{ page.date() | date('d. m. Y') }}</span>
         </div>
         <article class="content">
-            {% if page.header.preview.show %}
-                <article class="detail-preview">
-                    <div class="preview-image">
-                        {% if page.header.preview.image %}
-                            {{ page.media[page.header.preview.image].cropZoom(600,450).html('', page.header.title) }}
-                        {% else %}
-                            <img src="{{ theme_url }}/images/default_image.jpg" alt="{{ page.header.title }}">
-                        {% endif %}
-                    </div>
-                    <div class="preview-desc">
-                        <p>{{ page.header.preview.text }}</p>
-                    </div>
-                </article>
-            {% endif %}
             <div class="markdown">
                 {{ page.content|raw }}
             </div>

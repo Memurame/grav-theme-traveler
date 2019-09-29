@@ -15,11 +15,10 @@ form:
               autofocus: true
               label: THEME_TRAVELER.ADMIN.FIELDS.TITLE.LABEL
             header.image:
-              type: file
-              label: "Header Bild"
-              destination: '@self'
-              accept:
-                - image/*
+              type: filepicker
+              label: THEME_TRAVELER.ADMIN.FIELDS.PREVIEW_IMAGE.LABEL
+              folder: '@self'
+              preview_images: true
             settings:
               type: section
               title: THEME_TRAVELER.ADMIN.SECTION.SETTINGS

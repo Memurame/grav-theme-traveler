@@ -3,13 +3,13 @@
 {% block main %}
     {% set collection = page.collection().published() %}
     {% set bg = page.header.image | first %}
-    <section class="section-headerimage" style="background-image: url('{{ page.media[bg.name].url }}')">
+    <section class="section-headerimage" style="background-image: url('{{ page.media[bg.name].cropZoom(1920,450).url }}')">
         <h1 class="heading">{{ page.header.title }}</h1>
     </section>
     <section class="page section-entrylist">
         <article class="content layout-{{ page.header.layout }}">
-            {% for item in collection %}
-                {% if item.template()  | slice(0, 5) == 'entry' and item.header.show %}
+            {% for item in collection.visible %}
+                {% if item.template()  | slice(0, 5) == 'entry' %}
 
                     <article class="entry-item">
                         <div class="item-image">

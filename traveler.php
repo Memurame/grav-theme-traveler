@@ -12,9 +12,20 @@ class Traveler extends Theme
   public static function getSubscribedEvents()
   {
     return [
-      'onBlueprintCreated' => ['onBlueprintCreated', 0]
+      'onBlueprintCreated' => ['onBlueprintCreated', 0],
+      'onAdminCreatePageFrontmatter' => ['onAdminCreatePageFrontmatter', 0]
     ];
 
+  }
+
+  public function onAdminCreatePageFrontmatter(Event $event)
+  {
+    $header = $event['header'];
+
+    if(substr($event['data']['name'], 0, 5) == 'entry'){
+      $header['visible'] = 1;
+      $event['header'] = $header;
+    }
   }
 
   public function onBlueprintCreated(Event $event)

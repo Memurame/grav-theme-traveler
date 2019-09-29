@@ -20,6 +20,7 @@ de:
       CREATED: "Erstellt"
       BACK: "zurück"
       PREVIEW_IMAGE: "Vorschau Bild"
+      CATEGORY: 'Kategorien:'
     ADMIN:
       TAB:
         CONTENT: "Inhalt"
@@ -45,12 +46,6 @@ de:
           LABEL: "Gallerie"
         TEXT:
           LABEL: "Text"
-        ENTRYSHOW:
-          LABEL: "Sichtbarkeit des Beitrags"
-          HELP: 'Wenn Versteckt so wird dieser Beitrag nicht in der Liste erscheinen, ist jedoch trozdem aufrufbar per URL'
-          OPTIONS:
-            0: "Versteckt"
-            1: "Sichtbar"
         HEADING:
           LABEL: "Überschrift"
         SLOGAN:
@@ -74,11 +69,6 @@ de:
           DESCRIPTION: "Die Bilder werden im Verhältnis 4:3 verkleinert und zugeschnitten."
         PREVIEW_TEXT:
           LABEL: "Kurze Einleitung"
-          OPTIONS:
-            0: "Nein"
-            1: "Ja"
-        PREVIEW_SHOW:
-          LABEL: "Auf der Detailseite anzeigen?"
           OPTIONS:
             0: "Nein"
             1: "Ja"
@@ -133,6 +123,7 @@ en:
       CREATED: "Created"
       BACK: "back"
       PREVIEW_IMAGE: "Preview image"
+      CATEGORY: 'Tags:'
     ADMIN:
       TAB:
         CONTENT: "Content"
@@ -158,12 +149,6 @@ en:
           LABEL: "Gallery"
         TEXT:
           LABEL: "Text"
-        ENTRYSHOW:
-          LABEL: "Visibility of the post"
-          HELP: 'If hidden, this post will not appear in the list, but is still callable via URL'
-          OPTIONS:
-            0: "Hidden"
-            1: "Visible"
         HEADING:
           LABEL: "Heading"
         SLOGAN:
@@ -187,11 +172,6 @@ en:
           DESCRIPTION: "The pictures are reduced in a ratio of 4: 3 and cropped."
         PREVIEW_TEXT:
           LABEL: "Short introduction"
-          OPTIONS:
-            0: "No"
-            1: "Yes"
-        PREVIEW_SHOW:
-          LABEL: "Show on the detail page?"
           OPTIONS:
             0: "No"
             1: "Yes"

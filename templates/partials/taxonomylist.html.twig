@@ -5,7 +5,7 @@
         <a class="filter-button font-weight-bold" href="{{ base_url }}">Alle</a>
     {% for tax,value in taxlist[taxonomy] %}
         {% set active = uri.param(taxonomy) == tax? 'active' : '' %}
-        <a class="filter-button {{ active }}" href="{{ base_url }}/{{ taxonomy }}{{ config.system.param_sep }}{{ tax }}">{{ tax | capitalize }}</a>
+        <a class="filter-button {{ active }}" href="{{ base_url }}/{{ taxonomy }}{{ config.system.param_sep }}{{ tax }}">{{ tax | capitalize }} ({{ value }})</a>
     {% endfor %}
 </div>
 {% endif %}
