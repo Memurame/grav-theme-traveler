@@ -1,5 +1,5 @@
 # v1.0.2
-## 27-09-2019
+## 29-09-2019
 
 1. [](#fix)
     * Link to detail on last-entries (modular) not working
@@ -10,6 +10,7 @@
     * Header images are cropped
     * Some CSS adjustments
     * Taxomomy as aside on the right side
+    * Update demo pages
 1. [](#new)
     * Add visible frontmatter by page create
 

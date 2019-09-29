@@ -1,12 +1,7 @@
 ---
 title: Contact
+image: Dark-newyork-city-wallpaper.jpg
 date: '14:02 25-09-2019'
-image:
-    user/pages/05.contact/header/New-york-city-wallpapers.jpg:
-        name: New-york-city-wallpapers.jpg
-        type: image/jpeg
-        size: 882607
-        path: user/pages/05.contact/header/New-york-city-wallpapers.jpg
 form:
     name: contactform
     fields:
@@ -24,13 +19,13 @@ form:
                 required: true
         subject:
             label: false
-            placeholder: 'subject'
+            placeholder: subject
             type: text
             validate:
                 required: true
         text:
             label: false
-            placeholder: 'message'
+            placeholder: message
             type: textarea
             validate:
                 required: true

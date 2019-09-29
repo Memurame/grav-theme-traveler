@@ -1,11 +1,7 @@
 ---
 title: Typography
-image:
-    user/pages/04.typography/header/Street-new-york-city-HD-world-wallpapers.jpg:
-        name: Street-new-york-city-HD-world-wallpapers.jpg
-        type: image/jpeg
-        size: 533796
-        path: user/pages/04.typography/header/Street-new-york-city-HD-world-wallpapers.jpg
+image: 'b (1).jpg'
+media_order: 'b (1).jpg'
 ---
 
 ### Headings
