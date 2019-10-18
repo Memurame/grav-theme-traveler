@@ -28,6 +28,7 @@ de:
         CONTENT: "Seiten Inhalt"
         SETTINGS: "Einstellugen"
         PREVIEW: "Vorschau"
+        MEDIA: 'Medien'
       FIELDS:
         TITLE:
           LABEL: "Titel"
@@ -131,6 +132,7 @@ en:
         CONTENT: "Pages content"
         SETTINGS: "Settings"
         PREVIEW: "Preview"
+        MEDIA: 'Media'
       FIELDS:
         TITLE:
           LABEL: "Title"

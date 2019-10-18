@@ -1,6 +1,6 @@
 ---
 title: Contact
-image: Dark-newyork-city-wallpaper.jpg
+image: /contact/Dark-newyork-city-wallpaper.jpg
 date: '14:02 25-09-2019'
 form:
     name: contactform

@@ -1,6 +1,6 @@
 ---
 title: Default
-image: Blurred-city-street-world-wallpaper.jpg
+image: /default/Dark-newyork-city-wallpaper.jpg
 media_order: 'Awesome-new-york-lights-wallpaper-hd.jpg,Dark-newyork-city-wallpaper.jpg,Blurred-city-street-world-wallpaper.jpg'
 ---
 

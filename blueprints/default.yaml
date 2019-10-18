@@ -15,14 +15,23 @@ form:
               autofocus: true
               label: THEME_TRAVELER.ADMIN.FIELDS.TITLE.LABEL
             header.image:
-              type: filepicker
+              type: mediapicker
               label: THEME_TRAVELER.ADMIN.FIELDS.PREVIEW_IMAGE.LABEL
-              folder: '@self'
               preview_images: true
             content:
-              type: markdown
-              validate:
-                type: textarea
-            header.media_order:
-              type: pagemedia
-              label: PLUGIN_ADMIN.PAGE_MEDIA
+              type: section
+              title: THEME_TRAVELER.ADMIN.SECTION.CONTENT
+              underline: true
+              fields:
+                content:
+                  type: markdown
+                  validate:
+                    type: textarea
+            media:
+              type: section
+              title: THEME_TRAVELER.ADMIN.SECTION.MEDIA
+              underline: true
+              fields:
+                header.media_order:
+                  type: pagemedia
+                  label: PLUGIN_ADMIN.PAGE_MEDIA

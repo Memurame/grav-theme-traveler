@@ -15,11 +15,17 @@ form:
               autofocus: true
               label: THEME_TRAVELER.ADMIN.FIELDS.TITLE.LABEL
             header.image:
-              type: file
+              type: mediapicker
               label: THEME_TRAVELER.ADMIN.FIELDS.IMAGE_HEADER.LABEL
-              destination: '@self'
-              accept:
-                - image/*
+              preview_images: true
+            media:
+              type: section
+              title: THEME_TRAVELER.ADMIN.SECTION.MEDIA
+              underline: true
+              fields:
+                header.media_order:
+                  type: pagemedia
+                  label: PLUGIN_ADMIN.PAGE_MEDIA
             settings:
               type: section
               title: THEME_TRAVELER.ADMIN.SECTION.SETTINGS

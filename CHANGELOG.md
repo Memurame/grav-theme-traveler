@@ -7,6 +7,7 @@
     * Picture selection changed in pages (mediapicker)
     * Set creation date in Theme and remove plugin
     * Distinguish between httpcode error pages and custom.
+    * Update demo pages in dir `_demo/pages/`
 
 # v1.0.2
 ## 29-09-2019

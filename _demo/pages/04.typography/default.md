@@ -1,6 +1,6 @@
 ---
 title: Typography
-image: 'b (1).jpg'
+image: /typography/b%20(1).jpg
 media_order: 'b (1).jpg'
 ---
 
