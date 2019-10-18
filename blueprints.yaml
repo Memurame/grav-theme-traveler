@@ -1,5 +1,5 @@
 name: "Traveler"
-version: 1.0.2
+version: 1.0.3
 description: "A theme for travelers or anyone who likes a modern website and wants to share their experiences with others."
 icon: id-card-o
 keywords: travel, traveling, blog, modular
@@ -13,7 +13,6 @@ license: MIT
 demo: https://demo.hirter.dev/grav/traveler
 dependencies:
   - { name: grav, version: '>=1.6.0' }
-  - auto-date
   - taxonomylist
   - pagination
 form:

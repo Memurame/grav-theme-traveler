@@ -837,20 +837,28 @@ a{
     margin: 0 auto;
   }
   .page.section-error{
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
+
     text-align: center;
     width: 100%;
-    .errorcode{
-      font-size: 120px;
-      color: $color5;
-      font-family: $font1;
-      line-height: 100%;
-      font-weight: 800;
-      text-shadow: 1px 1px 5px $color2;
+    &.customerror{
+      @include make-container-max-widths();
+      margin: 0 auto;
     }
+    &.httperror{
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      .errorcode{
+        font-size: 120px;
+        color: $color5;
+        font-family: $font1;
+        line-height: 100%;
+        font-weight: 800;
+        text-shadow: 1px 1px 5px $color2;
+      }
+    }
+
   }
 
 

@@ -1,7 +1,17 @@
+# v1.0.3
+## 18-10-2019
+
+1. [](#bugfix)
+    * ChangeLog corrected
+1. [](#improved)
+    * Picture selection changed in pages (mediapicker)
+    * Set creation date in Theme and remove plugin
+    * Distinguish between httpcode error pages and custom.
+
 # v1.0.2
 ## 29-09-2019
 
-1. [](#fix)
+1. [](#bugfix)
     * Link to detail on last-entries (modular) not working
     * show only visible entries in list
 1. [](#improved)
@@ -17,7 +27,7 @@
 # v1.0.1
 ## 26-09-2019
 
-1. [](#fix)
+1. [](#bugfix)
     * Update README
 1. [](#improved)
     * Remove console.log in JS

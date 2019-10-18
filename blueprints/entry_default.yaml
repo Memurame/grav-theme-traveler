@@ -20,9 +20,9 @@ form:
               underline: true
               fields:
                 header.preview.image:
-                  type: filepicker
+                  type: mediapicker
                   label: THEME_TRAVELER.ADMIN.FIELDS.PREVIEW_IMAGE.LABEL
-                  folder: '@self'
+                  placeholder: Click here to open the mediapicker
                   preview_images: true
                 header.preview.text:
                   type: textarea
