@@ -16,8 +16,7 @@ form:
               label: THEME_TRAVELER.ADMIN.FIELDS.TITLE.LABEL
             header.image:
               type: filepicker
-              label: THEME_TRAVELER.ADMIN.FIELDS.PREVIEW_IMAGE.LABEL
-              folder: '@self'
+              label: THEME_TRAVELER.ADMIN.FIELDS.IMAGE_HEADER.LABEL
               preview_images: true
             settings:
               type: section

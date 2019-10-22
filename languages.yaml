@@ -65,6 +65,8 @@ de:
           LABEL: "Header Bild"
         DESCRIPTION:
           LABEL: "Beschreibung"
+        REFERENCE:
+          LABEL: 'Blog auswählen'
         PREVIEW_IMAGE:
           LABEL: "Bild"
           DESCRIPTION: "Die Bilder werden im Verhältnis 4:3 verkleinert und zugeschnitten."
@@ -165,6 +167,8 @@ en:
           LABEL: "Image"
         IMAGES:
           LABEL: "Images"
+        REFERENCE:
+          LABEL: 'select blog page'
         IMAGE_HEADER:
           LABEL: "Header image"
         DESCRIPTION:

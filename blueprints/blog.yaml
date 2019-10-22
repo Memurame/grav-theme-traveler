@@ -15,7 +15,7 @@ form:
               autofocus: true
               label: THEME_TRAVELER.ADMIN.FIELDS.TITLE.LABEL
             header.image:
-              type: mediapicker
+              type: filepicker
               label: THEME_TRAVELER.ADMIN.FIELDS.IMAGE_HEADER.LABEL
               preview_images: true
             media:

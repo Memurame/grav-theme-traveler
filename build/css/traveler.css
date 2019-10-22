@@ -17064,11 +17064,11 @@ a:hover {
   border: 1px solid #aaaaaa;
 }
 
-.contactform .form-field .form-data input:-ms-input-placeholder, .contactform .form-field .form-data input:-ms-input-placeholder, .contactform .form-field .form-data input::-ms-input-placeholder, .contactform .form-field .form-data textarea:-ms-input-placeholder, .contactform .form-field .form-data textarea:-ms-input-placeholder, .contactform .form-field .form-data textarea::-ms-input-placeholder {
+.contactform .form-field .form-data input:-ms-input-placeholder, .contactform .form-field .form-data textarea:-ms-input-placeholder {
   color: red;
 }
 
-.contactform .form-field .form-data input::-ms-input-placeholder, .contactform .form-field .form-data input:-ms-input-placeholder, .contactform .form-field .form-data input::-ms-input-placeholder, .contactform .form-field .form-data textarea::-ms-input-placeholder, .contactform .form-field .form-data textarea:-ms-input-placeholder, .contactform .form-field .form-data textarea::-ms-input-placeholder {
+.contactform .form-field .form-data input::-ms-input-placeholder, .contactform .form-field .form-data textarea::-ms-input-placeholder {
   color: red;
 }
 
@@ -17911,6 +17911,10 @@ a:hover {
 
 .site-content .modular.section-lastentries .entrylist .entry-item a:hover {
   background-color: #1E2339;
+}
+
+.site-content .modular.section-lastentries .entrylist .entry-item .item-image {
+  cursor: pointer;
 }
 
 .site-content .modular.section-lastentries .entrylist .entry-item .item-image img {

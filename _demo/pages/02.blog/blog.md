@@ -1,6 +1,6 @@
 ---
 title: Blog
-image: /blog/Street-new-york-city-HD-world-wallpapers.jpg
+image: Street-new-york-city-HD-world-wallpapers.jpg
 content:
     items: '@self.children'
     order:

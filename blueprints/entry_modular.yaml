@@ -14,15 +14,18 @@ form:
               type: text
               autofocus: true
               label: THEME_TRAVELER.ADMIN.FIELDS.TITLE.LABEL
+            header.image:
+              type: filepicker
+              label: THEME_TRAVELER.ADMIN.FIELDS.PREVIEW_IMAGE.LABEL
+              preview_images: true
             preview:
               type: section
               title: THEME_TRAVELER.ADMIN.SECTION.PREVIEW
               underline: true
               fields:
                 header.preview.image:
-                  type: mediapicker
+                  type: filepicker
                   label: THEME_TRAVELER.ADMIN.FIELDS.PREVIEW_IMAGE.LABEL
-                  placeholder: Click here to open the mediapicker
                   preview_images: true
                 header.preview.text:
                   type: textarea
