@@ -18,6 +18,14 @@ form:
               type: filepicker
               label: THEME_TRAVELER.ADMIN.FIELDS.IMAGE_HEADER.LABEL
               preview_images: true
+            media:
+              type: section
+              title: THEME_TRAVELER.ADMIN.SECTION.MEDIA
+              underline: true
+              fields:
+                header.media_order:
+                  type: pagemedia
+                  label: PLUGIN_ADMIN.PAGE_MEDIA
             settings:
               type: section
               title: THEME_TRAVELER.ADMIN.SECTION.SETTINGS
