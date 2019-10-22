@@ -1,3 +1,9 @@
+# v1.0.4
+## 22-10-2019
+
+1. [](#bugfix)
+    * Image upload in modular page
+    
 # v1.0.3
 ## 22-10-2019
 
