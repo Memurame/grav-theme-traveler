@@ -15,12 +15,7 @@
           </div>
           <div class="item-image">
             {% if item.header.preview.image %}
-              {% set preview_image = item.header.preview.image | first %}
-              {% if  item.template() == 'entry_default' %}
-                {{ item.media[item.header.preview.image].cropZoom(600,450).html('', item.header.title) }}
-              {% else %}
-                {{ item.media[preview_image.name].cropZoom(600,450).html('', item.header.title) }}
-              {% endif %}
+              {{ item.media[item.header.preview.image].cropZoom(600,450).html('', item.header.title) }}
             {% else %}
               <img src="{{ theme_url }}/images/default_image.jpg" alt="{{ item.header.title }}">
             {% endif %}

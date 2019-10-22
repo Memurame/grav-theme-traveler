@@ -1,8 +1,10 @@
 ---
 title: 'Default entry'
+image: Kilimandscharo-Safari-Kibo-mit-Elefanten.jpg
 preview:
-    image: Awesome-new-york-lights-wallpaper-hd.jpg
+    image: Safari.jpg
     text: 'This is an example **standard** page, where content from one single page is displayed. This page also shows how to add classes to Markdown images for floating images left or right, with and without captions.'
+media_order: 'Safari.jpg,Kilimandscharo-Safari-Kibo-mit-Elefanten.jpg'
 taxonomy:
     category:
         - blog

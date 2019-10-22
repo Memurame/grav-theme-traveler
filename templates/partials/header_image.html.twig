@@ -1,0 +1,8 @@
+{% set image_raw =  page.header.image | split('/') %}
+{% set image_name = image_raw | last %}
+{% set image_dir =  (image_raw | slice(0, -1)) | join('/') %}
+{% set image_path = ((page.find(image_dir).filePathClean | split('/')) | slice(0, -1)) | join('/') %}
+
+<section class="section-headerimage" style="background-image: url('{{ media_directory(image_path)[image_name].cropZoom(1920,450).url }}')">
+  <h1 class="heading">{{ page.header.title }}</h1>
+</section>

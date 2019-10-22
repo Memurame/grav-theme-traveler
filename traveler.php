@@ -24,6 +24,7 @@ class Traveler extends Theme
 
     if(substr($event['data']['name'], 0, 5) == 'entry'){
       $header['visible'] = 1;
+      $header['date'] = date($this->grav['config']->get('system.pages.dateformat.default', 'H:i d-m-Y'));
       $event['header'] = $header;
     }
   }

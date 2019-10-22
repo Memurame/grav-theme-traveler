@@ -1,7 +1,19 @@
+# v1.0.3
+## 22-10-2019
+
+1. [](#bugfix)
+    * ChangeLog corrected
+    * Language file
+1. [](#improved)
+    * The selection of the header image and preview image changed
+    * Set creation date in Theme and remove plugin
+    * Distinguish between httpcode error pages and custom.
+    * Update demo pages in dir `_demo/pages/`
+
 # v1.0.2
 ## 29-09-2019
 
-1. [](#fix)
+1. [](#bugfix)
     * Link to detail on last-entries (modular) not working
     * show only visible entries in list
 1. [](#improved)
@@ -17,7 +29,7 @@
 # v1.0.1
 ## 26-09-2019
 
-1. [](#fix)
+1. [](#bugfix)
     * Update README
 1. [](#improved)
     * Remove console.log in JS

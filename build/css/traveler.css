@@ -17064,11 +17064,11 @@ a:hover {
   border: 1px solid #aaaaaa;
 }
 
-.contactform .form-field .form-data input:-ms-input-placeholder, .contactform .form-field .form-data input:-ms-input-placeholder, .contactform .form-field .form-data input::-ms-input-placeholder, .contactform .form-field .form-data textarea:-ms-input-placeholder, .contactform .form-field .form-data textarea:-ms-input-placeholder, .contactform .form-field .form-data textarea::-ms-input-placeholder {
+.contactform .form-field .form-data input:-ms-input-placeholder, .contactform .form-field .form-data textarea:-ms-input-placeholder {
   color: red;
 }
 
-.contactform .form-field .form-data input::-ms-input-placeholder, .contactform .form-field .form-data input:-ms-input-placeholder, .contactform .form-field .form-data input::-ms-input-placeholder, .contactform .form-field .form-data textarea::-ms-input-placeholder, .contactform .form-field .form-data textarea:-ms-input-placeholder, .contactform .form-field .form-data textarea::-ms-input-placeholder {
+.contactform .form-field .form-data input::-ms-input-placeholder, .contactform .form-field .form-data textarea::-ms-input-placeholder {
   color: red;
 }
 
@@ -17771,15 +17771,46 @@ a:hover {
 }
 
 .site-content .page.section-error {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
   text-align: center;
   width: 100%;
 }
 
-.site-content .page.section-error .errorcode {
+.site-content .page.section-error.customerror {
+  margin: 0 auto;
+}
+
+@media (min-width: 576px) {
+  .site-content .page.section-error.customerror {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 870px) {
+  .site-content .page.section-error.customerror {
+    max-width: 872px;
+  }
+}
+
+@media (min-width: 992px) {
+  .site-content .page.section-error.customerror {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .site-content .page.section-error.customerror {
+    max-width: 1280px;
+  }
+}
+
+.site-content .page.section-error.httperror {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.site-content .page.section-error.httperror .errorcode {
   font-size: 120px;
   color: #FBFFFA;
   font-family: "Montserrat", sans-serif;
@@ -17880,6 +17911,10 @@ a:hover {
 
 .site-content .modular.section-lastentries .entrylist .entry-item a:hover {
   background-color: #1E2339;
+}
+
+.site-content .modular.section-lastentries .entrylist .entry-item .item-image {
+  cursor: pointer;
 }
 
 .site-content .modular.section-lastentries .entrylist .entry-item .item-image img {
