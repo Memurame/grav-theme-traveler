@@ -9,13 +9,15 @@ use RocketTheme\Toolbox\Event\Event;
 class Traveler extends Theme
 {
 
+  protected $coloection;
+
   public static function getSubscribedEvents()
   {
     return [
       'onBlueprintCreated' => ['onBlueprintCreated', 0],
-      'onAdminCreatePageFrontmatter' => ['onAdminCreatePageFrontmatter', 0]
+      'onAdminCreatePageFrontmatter' => ['onAdminCreatePageFrontmatter', 0],
+      'onTwigSiteVariables'   => ['onTwigSiteVariables', 0]
     ];
-
   }
 
   public function onAdminCreatePageFrontmatter(Event $event)
@@ -53,6 +55,15 @@ class Traveler extends Theme
       $blueprint->extend($extends, true);
 
     }
+
+  }
+
+
+  public function onTwigSiteVariables()
+  {
+    $this->grav['assets']->addCss('theme://build/css/traveler.min.css');
+    $this->grav['assets']->addJs('theme://build/js/traveler.core.min.js', ['group' => 'bottom']);
+    $this->grav['assets']->addJs('theme://build/js/traveler.app.min.js', ['group' => 'bottom']);
 
   }
 

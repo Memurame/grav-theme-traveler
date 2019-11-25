@@ -1,3 +1,13 @@
+# v1.0.5
+## 25-11-2019
+
+1. [](#new)
+    * Support for Simplesearch plugin
+1. [](#improved)
+    * Change color of menu button
+    * Assets in PHP
+    * Update language 
+
 # v1.0.4
 ## 22-10-2019
 

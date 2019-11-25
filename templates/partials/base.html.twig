@@ -24,10 +24,10 @@
             <link rel="canonical" href="{{ page.url(true, true) }}" />
             <title>{% if header.title %}{{ header.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
 
-            {% block stylesheets %}
-                {% do assets.addCss('theme://build/css/traveler.min.css', 1) %}
+            {% block assets deferred %}
+              {{ assets.css()|raw }}
+              {{ assets.js()|raw }}
             {% endblock %}
-            {{ assets.css() }}
         {% endblock head %}
 
     </head>
@@ -44,10 +44,9 @@
               Grav Theme: <a href="//hirter.dev" target="_blank">Tom Hirter</a></small>
           </footer>
         </div>
-        {% block javascripts %}
-            {% do assets.addJs('theme://build/js/traveler.core.min.js',100) %}
-            {% do assets.addJs('theme://build/js/traveler.app.min.js',80) %}
+
+        {% block bottom %}
+          {{ assets.js('bottom')|raw }}
         {% endblock %}
-        {{ assets.js() }}
     </body>
 </html>

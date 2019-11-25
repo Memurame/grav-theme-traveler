@@ -21,6 +21,8 @@ de:
       BACK: "zurück"
       PREVIEW_IMAGE: "Vorschau Bild"
       CATEGORY: 'Kategorien:'
+      FILTER_DELETE: 'Filter löschen'
+      NO_ENTRY: 'Keine Einträge gefunden'
     ADMIN:
       TAB:
         CONTENT: "Inhalt"
@@ -29,6 +31,7 @@ de:
         SETTINGS: "Einstellugen"
         PREVIEW: "Vorschau"
         MEDIA: 'Medien'
+        MAP: "Map"
       FIELDS:
         TITLE:
           LABEL: "Titel"
@@ -127,6 +130,8 @@ en:
       BACK: "back"
       PREVIEW_IMAGE: "Preview image"
       CATEGORY: 'Tags:'
+      FILTER_DELETE: 'reset search'
+      NO_ENTRY: 'No entries found'
     ADMIN:
       TAB:
         CONTENT: "Content"
@@ -135,6 +140,7 @@ en:
         SETTINGS: "Settings"
         PREVIEW: "Preview"
         MEDIA: 'Media'
+        MAP: "Map"
       FIELDS:
         TITLE:
           LABEL: "Title"
