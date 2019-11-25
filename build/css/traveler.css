@@ -16982,7 +16982,7 @@ a:hover {
   transform: translateX(-50%);
   height: 50px;
   width: 60px;
-  background-color: #EE7B64;
+  background-color: #1E2339;
   border-top-left-radius: 50%;
   border-top-right-radius: 50%;
   border-top: 1px solid #FBFFFA;
@@ -17064,11 +17064,11 @@ a:hover {
   border: 1px solid #aaaaaa;
 }
 
-.contactform .form-field .form-data input:-ms-input-placeholder, .contactform .form-field .form-data textarea:-ms-input-placeholder {
+.contactform .form-field .form-data input:-ms-input-placeholder, .contactform .form-field .form-data input:-ms-input-placeholder, .contactform .form-field .form-data input::-ms-input-placeholder, .contactform .form-field .form-data textarea:-ms-input-placeholder, .contactform .form-field .form-data textarea:-ms-input-placeholder, .contactform .form-field .form-data textarea::-ms-input-placeholder {
   color: red;
 }
 
-.contactform .form-field .form-data input::-ms-input-placeholder, .contactform .form-field .form-data textarea::-ms-input-placeholder {
+.contactform .form-field .form-data input::-ms-input-placeholder, .contactform .form-field .form-data input:-ms-input-placeholder, .contactform .form-field .form-data input::-ms-input-placeholder, .contactform .form-field .form-data textarea::-ms-input-placeholder, .contactform .form-field .form-data textarea:-ms-input-placeholder, .contactform .form-field .form-data textarea::-ms-input-placeholder {
   color: red;
 }
 
@@ -17105,7 +17105,7 @@ a:hover {
   left: 0;
   width: 100%;
   height: 0;
-  background-color: #EE7B64;
+  background-color: #1E2339;
   z-index: 800;
   overflow: hidden;
   transition-duration: 0.5s;
@@ -17497,6 +17497,7 @@ a:hover {
   margin: 0 auto;
   display: flex;
   flex-flow: row;
+  flex-wrap: wrap;
 }
 
 @media (min-width: 576px) {
@@ -17521,6 +17522,43 @@ a:hover {
   .site-content .page.section-entrylist {
     max-width: 1280px;
   }
+}
+
+.site-content .page.section-entrylist .search {
+  width: 100%;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+.site-content .page.section-entrylist .search .search-delete {
+  font-size: 14px;
+  padding-left: .5rem;
+}
+
+.site-content .page.section-entrylist .search button {
+  padding: 4px 10px;
+}
+
+.site-content .page.section-entrylist .search button i {
+  width: 24px;
+}
+
+.site-content .page.section-entrylist .search input {
+  width: 300px;
+  padding: 5px;
+  border: 1px solid #aaaaaa;
+}
+
+.site-content .page.section-entrylist .search input:-ms-input-placeholder, .site-content .page.section-entrylist .search input:-ms-input-placeholder, .site-content .page.section-entrylist .search input::-ms-input-placeholder {
+  color: red;
+}
+
+.site-content .page.section-entrylist .search input::-ms-input-placeholder, .site-content .page.section-entrylist .search input:-ms-input-placeholder, .site-content .page.section-entrylist .search input::-ms-input-placeholder {
+  color: red;
+}
+
+.site-content .page.section-entrylist .search input::placeholder, .site-content .page.section-entrylist .search input:-ms-input-placeholder, .site-content .page.section-entrylist .search input::-ms-input-placeholder {
+  color: red;
 }
 
 .site-content .page.section-entrylist .taglist {
@@ -17558,6 +17596,12 @@ a:hover {
   display: flex;
   flex-flow: column;
   border-top: 1px solid #1E2339;
+}
+
+.site-content .page.section-entrylist .content .no_results {
+  text-align: center;
+  padding-top: 2rem;
+  font-size: 24px;
 }
 
 .site-content .page.section-entrylist .content .entry-item {
@@ -17624,6 +17668,13 @@ a:hover {
 @media (max-width: 991.98px) {
   .site-content .page.section-entrylist {
     flex-flow: column;
+  }
+  .site-content .page.section-entrylist .search input {
+    width: 270px;
+  }
+  .site-content .page.section-entrylist .search .search-delete {
+    display: block;
+    padding: 0;
   }
   .site-content .page.section-entrylist .taglist {
     order: 1;

@@ -8,5 +8,7 @@ content:
         dir: desc
     pagination: '1'
     limit: '10'
+simplesearch:
+    route: @self
 ---
 

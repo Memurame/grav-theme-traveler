@@ -1,54 +1,66 @@
 {% extends 'partials/base.html.twig' %}
 
 {% block main %}
-  {% set collection = page.collection().published() %}
+  {% if config.plugins.simplesearch.enabled and search_results %}
+    {% set collection = search_results %}
+  {% else %}
+    {% set collection = page.collection().published().visible() %}
+  {% endif %}
 
   <section class="section-headerimage" style="background-image: url('{{ page.media[page.header.image].cropZoom(1920,450).url }}')">
     <h1 class="heading">{{ page.header.title }}</h1>
   </section>
 
   <section class="page section-entrylist">
-      <article class="content layout-{{ page.header.layout }}">
-          {% for item in collection.visible %}
-              {% if item.template()  | slice(0, 5) == 'entry' %}
+    {% if config.plugins.simplesearch.enabled %}
+      {% include 'partials/simplesearch_searchbox.html.twig' %}
+    {% endif %}
+    <article class="content layout-{{ page.header.layout }}">
+      {% if collection.count %}
+        {% for item in collection %}
+          {% if item.template()  | slice(0, 5) == 'entry' %}
 
-                  <article class="entry-item">
-                      <div class="item-image">
-                        {% if item.header.preview.image %}
-                          {{ item.media[item.header.preview.image].cropZoom(600,450).html('', item.header.title) }}
-                        {% else %}
-                            <img src="{{ theme_url }}/images/default_image.jpg" alt="{{ item.header.title }}">
-                        {% endif %}
+            <article class="entry-item">
+              <div class="item-image">
+                {% if item.header.preview.image %}
+                  {{ item.media[item.header.preview.image].cropZoom(600,450).html('', item.header.title) }}
+                {% else %}
+                  <img src="{{ theme_url }}/images/default_image.jpg" alt="{{ item.header.title }}">
+                {% endif %}
 
-                      </div>
-                      <div class="item-desc">
-                          <h2 class="title">{{ item.header.title }}</h2>
-                          <p>{{ item.header.preview.text }}</p>
+              </div>
+              <div class="item-desc">
+                <h2 class="title">{{ item.header.title }}</h2>
+                <p>{{ item.header.preview.text }}</p>
 
-                          {% if  item.taxonomy.tag %}
-                              <div class="tags">
-                                {% for tag in item.taxonomy.tag %}
-                                    <a href="{{ page.url() }}/tag{{ config.system.param_sep }}{{ tag }}">
-                                      <span class="entry-tag">{{ tag }}</span>
-                                    </a>
-                                {% endfor %}
-                              </div>
-                          {% endif %}
+                {% if  item.taxonomy.tag %}
+                  <div class="tags">
+                    {% for tag in item.taxonomy.tag %}
+                      <a href="{{ page.url() }}/tag{{ config.system.param_sep }}{{ tag }}">
+                        <span class="entry-tag">{{ tag }}</span>
+                      </a>
+                    {% endfor %}
+                  </div>
+                {% endif %}
 
-                          <a href="{{ item.url(true) }}" class="link-detail"><i class="fas fa-external-link-alt"></i> {{ "THEME_TRAVELER.FRONTEND.PROJEKTLINK" | t  }}</a>
-                      </div>
-                      <div class="item-date">
-                        <i class="fas fa-calendar-alt"></i> {{ item.date() | date('d. m. Y') }}
-                      </div>
-                  </article>
-              {% endif %}
-
-          {% endfor %}
-      </article>
-      <aside class="taglist">
-        <strong>Katergorien:</strong>
-        {% include 'partials/taxonomylist.html.twig' with {base_url: page.url(), taxonomy: 'tag', children_only: true} %}
-      </aside>
+                <a href="{{ item.url(true) }}" class="link-detail"><i class="fas fa-external-link-alt"></i> {{ "THEME_TRAVELER.FRONTEND.PROJEKTLINK" | t  }}</a>
+              </div>
+              <div class="item-date">
+                <i class="fas fa-calendar-alt"></i> {{ item.date() | date('d. m. Y') }}
+              </div>
+            </article>
+          {% endif %}
+        {% endfor %}
+      {% else %}
+        <article class="no_results">
+          {{"THEME_TRAVELER.FRONTEND.NO_ENTRY"|t}}
+        </article>
+      {% endif %}
+    </article>
+    <aside class="taglist">
+      <strong>Katergorien:</strong>
+      {% include 'partials/taxonomylist.html.twig' with {base_url: page.url(), taxonomy: 'tag', children_only: true} %}
+    </aside>
     {% if config.plugins.pagination.enabled and collection.params.pagination %}
       {% include 'partials/pagination.html.twig' with {'base_url':page.url, 'pagination':collection.params.pagination} %}
     {% endif %}
