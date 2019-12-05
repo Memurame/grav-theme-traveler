@@ -10,6 +10,7 @@ style:
   color:
     white: '#ffffff'
     black: '#212529'
+    bg: '#ffffff'
     1: '#DCCD56'
     2: '#EE7B64'
     3: '#1E2339'

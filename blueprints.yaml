@@ -135,6 +135,12 @@ form:
           default: '#212529'
           validate:
             required: true
+        style.color.bg:
+          type: colorpicker
+          label: THEME_TRAVELER.THEME.FIELDS.COLOR.BG.LABEL
+          default: '#ffffff'
+          validate:
+            required: true
         style.color.1:
           type: colorpicker
           label: THEME_TRAVELER.THEME.FIELDS.COLOR.1.LABEL

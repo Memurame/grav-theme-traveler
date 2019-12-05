@@ -1,7 +1,7 @@
 <style>
   html, body{
     font-family: {{ theme_var('style.font.main') }};
-    background-color: {{ theme_var('style.color.5') }};
+    background-color: {{ theme_var('style.color.bg') }};
     color: {{ theme_var('style.color.black') }};
   }
   .markdown ol li::before, .markdown ul:not(.sociallinks) li::before{
@@ -184,5 +184,11 @@
   }
   .site-footer{
     background-color: {{ theme_var('style.color.3') }};
+  }
+  .site-content .page footer .share{
+    background-color: {{ theme_var('style.color.bg') }};
+  }
+  .site-content .modular.section-gallery .gallery>article{
+    border: 14px solid {{ theme_var('style.color.bg') }};
   }
 </style>

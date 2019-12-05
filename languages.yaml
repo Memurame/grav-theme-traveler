@@ -18,6 +18,8 @@ de:
             LABEL: 'Schwarz'
           WHITE:
             LABEL: 'Weiss'
+          BG:
+            LABEL: 'Hintergrundfarbe'
           1:
             LABEL: 'Erste Farbe'
           2:
@@ -180,6 +182,8 @@ en:
             LABEL: 'Black'
           WHITE:
             LABEL: 'White'
+          BG:
+            LABEL: 'Background color'
           1:
             LABEL: 'First color'
           2:
