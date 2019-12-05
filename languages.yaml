@@ -4,7 +4,41 @@ de:
       SECTION:
         SITE: 'Site Defaults'
         HEADER: 'Header Defaults'
+      FIELDSET:
+        HEADER: 'Kopfbereich'
+        FOOTER: 'Fussbereich'
+        SITE: 'Seite'
+        COLOR: 'Farben'
+        FONT: 'Schriften'
+        VARIOUS: 'Diverses'
+        MAP: 'Google Map'
       FIELDS:
+        COLOR:
+          BLACK:
+            LABEL: 'Schwarz'
+          WHITE:
+            LABEL: 'Weiss'
+          BG:
+            LABEL: 'Hintergrundfarbe'
+          1:
+            LABEL: 'Erste Farbe'
+          2:
+            LABEL: 'Zweite Farbe'
+          3:
+            LABEL: 'Dritte Farbe'
+          4:
+            LABEL: 'Vierte Farbe'
+          5:
+            LABEL: 'Fünfte Farbe'
+        FONT:
+          IMPORT:
+            LABEL: 'Schriften Import'
+          MAIN:
+            LABEL: 'Haupt Schrift'
+          TITLE:
+            LABEL: 'Überschriften und Navigation'
+        MAP_API:
+          LABEL: 'API-Schlüssel'
         FAVICON:
           LABEL: 'Favicon'
           DESCRIPTION: 'Wird anstelle von `theme://images/favicon.png` verwendet'
@@ -31,8 +65,29 @@ de:
         SETTINGS: "Einstellugen"
         PREVIEW: "Vorschau"
         MEDIA: 'Medien'
-        MAP: "Map"
+        MAPSETTINGS: 'Map Einstellungen'
+        MAPINFO: 'Map Info'
       FIELDS:
+        MAP_LAT:
+          LABEL: 'Breitengrad'
+        MAP_LONG:
+          LABEL: 'Längengrad'
+        MAP_ZOOM:
+          LABEL: 'Zoom'
+        MAP_CONTROLS:
+          LABEL: 'Schaltflächen'
+        MAP_STYLE:
+          LABEL: 'Map Style'
+        MAP_DESC:
+          LABEL: 'Map Beschreibung'
+        MAP_TITLE:
+          LABEL: 'Marker Titel'
+        MAP_WINDOW:
+          LABEL: 'Info Fenster'
+        SIMPLESEARCH:
+          ROUTE:
+            LABEL: 'Seite für Suchergebnisse'
+            HELP: 'Diese Einstellung greift nur wenn das Simplesearch Plugin installiert wurde.'
         TITLE:
           LABEL: "Titel"
         SHOWTITLE:
@@ -113,7 +168,41 @@ en:
       SECTION:
         SITE: 'Site Defaults'
         HEADER: 'Header Defaults'
+      FIELDSET:
+        HEADER: 'Header'
+        FOOTER: 'Footer'
+        SITE: 'Site'
+        COLOR: 'Color'
+        FONT: 'Fonts'
+        VARIOUS: 'Various'
+        MAP: 'Google map'
       FIELDS:
+        COLOR:
+          BLACK:
+            LABEL: 'Black'
+          WHITE:
+            LABEL: 'White'
+          BG:
+            LABEL: 'Background color'
+          1:
+            LABEL: 'First color'
+          2:
+            LABEL: 'Second color'
+          3:
+            LABEL: 'Third color'
+          4:
+            LABEL: 'Fourth color'
+          5:
+            LABEL: 'Fifth color'
+        FONT:
+          IMPORT:
+            LABEL: 'Font import'
+          MAIN:
+            LABEL: 'Main font'
+          TITLE:
+            LABEL: 'Title and navigation'
+        MAP_API:
+          LABEL: 'API-key'
         FAVICON:
           LABEL: 'Favicon'
           DESCRIPTION: 'Used instead of `theme: // images / favicon.png`'
@@ -140,8 +229,29 @@ en:
         SETTINGS: "Settings"
         PREVIEW: "Preview"
         MEDIA: 'Media'
-        MAP: "Map"
+        MAPSETTINGS: 'Map settings'
+        MAPINFO: 'Map info'
       FIELDS:
+        MAP_LAT:
+          LABEL: 'Latitude'
+        MAP_LONG:
+          LABEL: 'Longitude'
+        MAP_ZOOM:
+          LABEL: 'Zoom'
+        MAP_CONTROLS:
+          LABEL: 'Controls'
+        MAP_STYLE:
+          LABEL: 'Map style'
+        MAP_DESC:
+          LABEL: 'Map description'
+        MAP_TITLE:
+          LABEL: 'Marker title'
+        MAP_WINDOW:
+          LABEL: 'Info window'
+        SIMPLESEARCH:
+          ROUTE:
+            LABEL: 'Page for search results'
+            HELP: 'This setting only works if the Simplesearch plugin has been installed.'
         TITLE:
           LABEL: "Title"
         SHOWTITLE:

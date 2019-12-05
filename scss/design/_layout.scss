@@ -625,7 +625,6 @@ a{
       }
       .share{
         text-align: right;
-        background-color: $color5;
         button{
           border: 0;
           padding: 0 3px;
@@ -1062,8 +1061,6 @@ a{
         width: 25%;
         background-size: cover;
         background-position: center center;
-        border: 14px solid $color5;
-
       }
     }
     @include media-breakpoint-down(sm) {

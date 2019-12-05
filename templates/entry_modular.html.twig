@@ -7,7 +7,7 @@
   <section class="page section-entry">
     <div class="actionbar">
       <div class="path">
-        <a href="{{ page.parent().url() }}" class="back"><i class="fas fa-reply"></i> zurück</a>
+        <a href="{{ uri.referrer ? base_url_simple  ~ uri.referrer : page.parent().url() }}" class="back"><i class="fas fa-reply"></i> {{"THEME_TRAVELER.FRONTEND.BACK"|t}}</a>
       </div>
       <span class="date"><i class="fas fa-calendar-alt"></i> {{ page.date() | date('d. m. Y') }}</span>
     </div>

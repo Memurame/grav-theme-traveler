@@ -15,19 +15,24 @@
             <link rel="shortcut icon" href="/favicon.ico">
             {% if favicon %}
                 {% set favicon_file = (favicon|first).name %}
-                <link rel="icon" type="image/png" href="{{ url('theme://images/favicon/' ~ favicon_file) }}" sizes="32X32" />
+                <link rel="icon" type="image/png" href="{{ url('theme://images/favicon/' ~ favicon_file) }}" sizes="32x32" />
                 <link rel="apple-touch-icon" href="{{ url('theme://images/favicon/' ~ favicon_file) }}">
             {% else %}
-                <link rel="icon" type="image/png" href="{{ url('theme://images/favicon.png') }}" sizes="32X32" />
+                <link rel="icon" type="image/png" href="{{ url('theme://images/favicon.png') }}" sizes="32x32" />
                 <link rel="apple-touch-icon" href="{{ url('theme://images/favicon.png') }}">
             {% endif %}
             <link rel="canonical" href="{{ page.url(true, true) }}" />
             <title>{% if header.title %}{{ header.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
 
+            {% if theme_var('style.fonts.import') %}
+              <link href="{{ theme_var('style.fonts.import') }}" rel="stylesheet">
+            {% endif %}
             {% block assets deferred %}
               {{ assets.css()|raw }}
               {{ assets.js()|raw }}
             {% endblock %}
+
+          {% include 'partials/custom-css.html.twig' %}
         {% endblock head %}
 
     </head>
@@ -44,7 +49,9 @@
               Grav Theme: <a href="//hirter.dev" target="_blank">Tom Hirter</a></small>
           </footer>
         </div>
-
+        {% if theme_var('map.apikey') %}
+          {%  include 'partials/map-js.html.twig' %}
+        {% endif %}
         {% block bottom %}
           {{ assets.js('bottom')|raw }}
         {% endblock %}
