@@ -16,7 +16,8 @@ class Traveler extends Theme
     return [
       'onBlueprintCreated' => ['onBlueprintCreated', 0],
       'onAdminCreatePageFrontmatter' => ['onAdminCreatePageFrontmatter', 0],
-      'onTwigSiteVariables'   => ['onTwigSiteVariables', 0]
+      'onTwigSiteVariables'   => ['onTwigSiteVariables', 0],
+      'onAdminSave' => ['onAdminSave', 0]
     ];
   }
 
@@ -24,11 +25,16 @@ class Traveler extends Theme
   {
     $header = $event['header'];
 
-    if(substr($event['data']['name'], 0, 5) == 'entry'){
+    if(substr($event['data']['name'], 0, 5) == 'entry' && !isset($header['date'])){
       $header['visible'] = 1;
       $header['date'] = date($this->grav['config']->get('system.pages.dateformat.default', 'H:i d-m-Y'));
       $event['header'] = $header;
     }
+
+  }
+
+  public function onAdminSave(Event $event){
+
   }
 
   public function onBlueprintCreated(Event $event)
