@@ -1,5 +1,5 @@
 name: "Traveler"
-version: 1.0.5
+version: 1.1.0
 description: "A theme for travelers or anyone who likes a modern website and wants to share their experiences with others."
 icon: id-card-o
 keywords: travel, traveling, blog, modular
@@ -18,10 +18,21 @@ dependencies:
 form:
   validation: loose
   fields:
-    site_section:
-      type: section
-      title: THEME_TRAVELER.THEME.SECTION.SITE
-      underline: true
+    map:
+      type: fieldset
+      title: THEME_TRAVELER.THEME.FIELDSET.MAP
+      collapsed: false
+      collapsible: true
+      fields:
+        map.apikey:
+          type: text
+          label: THEME_TRAVELER.THEME.FIELDS.MAP_API.LABEL
+          size: large
+    site:
+      type: fieldset
+      title: THEME_TRAVELER.THEME.FIELDSET.SITE
+      collapsed: false
+      collapsible: true
       fields:
         site.favicon:
           type: file
@@ -33,10 +44,11 @@ form:
           description: THEME_TRAVELER.THEME.FIELDS.FAVICON.DESCRIPTION
           accept:
             - image/*
-    header_section:
-      type: section
-      title: THEME_TRAVELER.THEME.SECTION.HEADER
-      underline: true
+    header:
+      type: fieldset
+      title: THEME_TRAVELER.THEME.FIELDSET.HEADER
+      collapsed: false
+      collapsible: true
       fields:
         header.logo:
           type: file
@@ -59,10 +71,11 @@ form:
             1: PLUGIN_ADMIN.ENABLED
           validate:
             type: bool
-    social_section:
-      type: section
-      title: 'Social Share'
-      underline: true
+    social:
+      type: fieldset
+      title: 'Social share'
+      collapsed: false
+      collapsible: true
       fields:
         social.twitter:
           type: toggle
@@ -104,5 +117,78 @@ form:
             1: PLUGIN_ADMIN.ENABLED
           validate:
             type: bool
+    style.color:
+      type: fieldset
+      title: THEME_TRAVELER.THEME.FIELDSET.COLOR
+      collapsed: false
+      collapsible: true
+      fields:
+        style.color.white:
+          type: colorpicker
+          label: THEME_TRAVELER.THEME.FIELDS.COLOR.WHITE.LABEL
+          default: '#ffffff'
+          validate:
+            required: true
+        style.color.black:
+          type: colorpicker
+          label: THEME_TRAVELER.THEME.FIELDS.COLOR.BLACK.LABEL
+          default: '#212529'
+          validate:
+            required: true
+        style.color.1:
+          type: colorpicker
+          label: THEME_TRAVELER.THEME.FIELDS.COLOR.1.LABEL
+          default: '#DCCD56'
+          validate:
+            required: true
+        style.color.2:
+          type: colorpicker
+          label: THEME_TRAVELER.THEME.FIELDS.COLOR.2.LABEL
+          default: '#EE7B64'
+          validate:
+            required: true
+        style.color.3:
+          type: colorpicker
+          label: THEME_TRAVELER.THEME.FIELDS.COLOR.3.LABEL
+          default: '#1E2339'
+          validate:
+            required: true
+        style.color.4:
+          type: colorpicker
+          label: THEME_TRAVELER.THEME.FIELDS.COLOR.4.LABEL
+          default: '#0DA8AF'
+          validate:
+            required: true
+        style.color.5:
+          type: colorpicker
+          label: THEME_TRAVELER.THEME.FIELDS.COLOR.5.LABEL
+          default: '#FBFFFA'
+          validate:
+            required: true
+
+    style.font:
+      type: fieldset
+      title: THEME_TRAVELER.THEME.FIELDSET.FONT
+      collapsed: false
+      collapsible: true
+      fields:
+        style.font.import:
+          type: text
+          label: THEME_TRAVELER.THEME.FIELDS.FONT.IMPORT.LABEL
+          default: 'https://fonts.googleapis.com/css?family=Lato:300,400,700|Montserrat:300,400,700,800&display=swap'
+          validate:
+            required: true
+        style.font.main:
+          type: text
+          label: THEME_TRAVELER.THEME.FIELDS.FONT.MAIN.LABEL
+          default: "'Lato', sans-serif"
+          validate:
+            required: true
+        style.font.title:
+          type: text
+          label: THEME_TRAVELER.THEME.FIELDS.FONT.TITLE.LABEL
+          default: "'Montserrat', sans-serif"
+          validate:
+            required: true
 
 

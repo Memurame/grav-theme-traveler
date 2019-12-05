@@ -1,3 +1,17 @@
+# v1.1.0
+## 05-12-2019
+
+1. [](#new)
+    * New modular site for google map
+    * Change color and fonts in theme settings
+1. [](#improved)
+    * Set Simplesearch route in page blueprint
+    * Some design changes
+1. [](#bugfix)
+    * Pagination is now at the bottom of the page
+    * Back button on default page
+    * Translation for back button
+
 # v1.0.5
 ## 25-11-2019
 

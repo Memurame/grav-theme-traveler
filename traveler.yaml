@@ -6,3 +6,16 @@ social:
   facebook: true
   linkedin: true
   whatsapp: true
+style:
+  color:
+    white: '#ffffff'
+    black: '#212529'
+    1: '#DCCD56'
+    2: '#EE7B64'
+    3: '#1E2339'
+    4: '#0DA8AF'
+    5: '#FBFFFA'
+  font:
+    import: 'https://fonts.googleapis.com/css?family=Lato:300,400,700|Montserrat:300,400,700,800&display=swap'
+    main: '''Lato'', sans-serif'
+    title: '''Montserrat'', sans-serif'

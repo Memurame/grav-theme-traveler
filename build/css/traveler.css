@@ -17064,11 +17064,11 @@ a:hover {
   border: 1px solid #aaaaaa;
 }
 
-.contactform .form-field .form-data input:-ms-input-placeholder, .contactform .form-field .form-data input:-ms-input-placeholder, .contactform .form-field .form-data input::-ms-input-placeholder, .contactform .form-field .form-data textarea:-ms-input-placeholder, .contactform .form-field .form-data textarea:-ms-input-placeholder, .contactform .form-field .form-data textarea::-ms-input-placeholder {
+.contactform .form-field .form-data input:-ms-input-placeholder, .contactform .form-field .form-data textarea:-ms-input-placeholder {
   color: red;
 }
 
-.contactform .form-field .form-data input::-ms-input-placeholder, .contactform .form-field .form-data input:-ms-input-placeholder, .contactform .form-field .form-data input::-ms-input-placeholder, .contactform .form-field .form-data textarea::-ms-input-placeholder, .contactform .form-field .form-data textarea:-ms-input-placeholder, .contactform .form-field .form-data textarea::-ms-input-placeholder {
+.contactform .form-field .form-data input::-ms-input-placeholder, .contactform .form-field .form-data textarea::-ms-input-placeholder {
   color: red;
 }
 
@@ -17549,11 +17549,11 @@ a:hover {
   border: 1px solid #aaaaaa;
 }
 
-.site-content .page.section-entrylist .search input:-ms-input-placeholder, .site-content .page.section-entrylist .search input:-ms-input-placeholder, .site-content .page.section-entrylist .search input::-ms-input-placeholder {
+.site-content .page.section-entrylist .search input:-ms-input-placeholder {
   color: red;
 }
 
-.site-content .page.section-entrylist .search input::-ms-input-placeholder, .site-content .page.section-entrylist .search input:-ms-input-placeholder, .site-content .page.section-entrylist .search input::-ms-input-placeholder {
+.site-content .page.section-entrylist .search input::-ms-input-placeholder {
   color: red;
 }
 

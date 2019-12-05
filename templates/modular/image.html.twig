@@ -9,8 +9,8 @@
     {% elseif page.header.scale == 3 %}
         {% set scale = 1 / 2.35 %}
     {% endif %}
-    <div class="image-container {% if page.header.showtitle == 2 %}title-placeholder{% endif %}">
-        <div class="image" data-scale="{{ scale }}" style="background-image: url('{{ page.media[image.name].cropResize(1280,720).url }}')">
+    <div class="media-container {% if page.header.showtitle == 2 %}title-placeholder{% endif %}">
+        <div class="media" data-scale="{{ scale }}" style="background-image: url('{{ page.media[image.name].cropResize(1280,720).url }}')">
 
         </div>
         {% if page.header.description %}<div class="caption">{{ page.header.description }}</div>{% endif %}
