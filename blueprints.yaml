@@ -1,5 +1,5 @@
 name: "Traveler"
-version: 1.1.0
+version: 1.1.1
 description: "A theme for travelers or anyone who likes a modern website and wants to share their experiences with others."
 icon: id-card-o
 keywords: travel, traveling, blog, modular
@@ -38,7 +38,7 @@ form:
           type: file
           label: THEME_TRAVELER.THEME.FIELDS.FAVICON.LABEL
           size: large
-          destination: 'theme://images/favicon'
+          destination: 'theme://custom/favicon'
           multiple: false
           markdown: true
           description: THEME_TRAVELER.THEME.FIELDS.FAVICON.DESCRIPTION
@@ -54,7 +54,7 @@ form:
           type: file
           label: THEME_TRAVELER.THEME.FIELDS.LOGO.LABEL
           size: large
-          destination: 'theme://images/logo'
+          destination: 'theme://custom/logo'
           multiple: false
           markdown: true
           description: THEME_TRAVELER.THEME.FIELDS.LOGO.DESCRIPTION

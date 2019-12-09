@@ -14,3 +14,5 @@ js/core
 package-lock.json
 images/favicon
 images/logo
+custom/
+!custom/css/.gitkeep

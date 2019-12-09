@@ -1,3 +1,11 @@
+# v1.1.1
+## 09-12-2019
+
+1. [](#improved)
+    * Update README
+1. [](#new)
+    * File for custom CSS
+    
 # v1.1.0
 ## 05-12-2019
 

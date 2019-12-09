@@ -18,6 +18,39 @@ My own personal website uses this theme. Feel free to [check it out](https://hir
 
 Alternatively, you can install Traveler via the Grav Admin interface.
 
+## Theme settings
+
+It is possible to change various theme settings:
+
+* Upload your own logo and favicon
+* Change the colors of the theme
+* Change the font
+* Add the Google maps API key
+* Add your own CSS file
+
+These settings can be changed directly in the backend without time-consuming changes via FTP
+
+Optionally, in the theme folder `/custom/css`, 
+the file `custom.css` can be used to define your own styles and to override the existing formatting.
+
+## Plugins from third parties
+
+### Required plugins
+
+#### [Pagination](https://github.com/getgrav/grav-plugin-pagination)
+This plugin is needed for the display of the blog entries.
+You can choose how many entries per page are displayed
+#### [Taxonomy](https://github.com/getgrav/grav-plugin-taxonomylist)
+With the help of this plugin the blog entries can be listed in different categories
+
+### Optional plugins
+### [SimpleSearch](https://github.com/getgrav/grav-plugin-simplesearch)
+This plugin extends the blog overview with a search field.
+As a result, search fields allow you to search for any entries.
+
+Once this plugin has been installed, the search can be used directly.
+Additional settings can be made in the plugin settings.
+
 ## Templates
 
 Traveler offers several templates for your site's pages. Here's a brief overview of each one.
@@ -85,3 +118,6 @@ Hereby a text can be inserted, it is handled as markdown.
 ### Youtube (Modular)
 
 Simply insert a Youtube video by the ID.
+
+### Google map
+Easy to add maps (Google Maps)

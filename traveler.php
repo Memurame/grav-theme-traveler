@@ -67,7 +67,12 @@ class Traveler extends Theme
 
   public function onTwigSiteVariables()
   {
-    $this->grav['assets']->addCss('theme://build/css/traveler.min.css');
+    $custom_css = __DIR__ . '/custom/css/custom.css';
+    if(!file_exists($custom_css)){
+      file_put_contents($custom_css, '');
+    }
+    $this->grav['assets']->addCss('theme://custom/css/custom.css', ['priority' => 10]);
+    $this->grav['assets']->addCss('theme://build/css/traveler.min.css', ['priority' => 100]);
     $this->grav['assets']->addJs('theme://build/js/traveler.core.min.js', ['group' => 'bottom']);
     $this->grav['assets']->addJs('theme://build/js/traveler.app.min.js', ['group' => 'bottom']);
 
