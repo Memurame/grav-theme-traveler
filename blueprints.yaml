@@ -10,7 +10,7 @@ author:
 homepage: https://github.com/Memurame/grav-theme-traveler
 bugs: https://github.com/Memurame/grav-theme-traveler/issues
 license: MIT
-demo: https://demo.hirter.dev/grav/traveler
+demo: https://demo.hirter.dev/traveler
 dependencies:
   - { name: grav, version: '>=1.6.0' }
   - taxonomylist
@@ -196,5 +196,3 @@ form:
           default: "'Montserrat', sans-serif"
           validate:
             required: true
-
-

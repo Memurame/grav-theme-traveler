@@ -1,11 +1,13 @@
 # v1.1.1
-## 09-12-2019
+## 16-03-2020
 
 1. [](#improved)
     * Update README
+    * Update demo pages
+    * Update link for demo site
 1. [](#new)
     * File for custom CSS
-    
+
 # v1.1.0
 ## 05-12-2019
 
@@ -28,14 +30,14 @@
 1. [](#improved)
     * Change color of menu button
     * Assets in PHP
-    * Update language 
+    * Update language
 
 # v1.0.4
 ## 22-10-2019
 
 1. [](#bugfix)
     * Image upload in modular page
-    
+
 # v1.0.3
 ## 22-10-2019
 
